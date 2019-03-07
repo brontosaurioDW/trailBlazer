@@ -1,0 +1,23 @@
+a,
+.btn {
+	transition: .3s;
+
+	&:hover {
+		opacity: 0.8;
+	}
+}
+
+.btn {
+	line-height: 40px;
+	height: unset;	
+	padding: 0 $gap + 20;
+
+	&.mdl-button--accent.mdl-button--accent.mdl-button--raised, 
+	&.mdl-button--accent.mdl-button--accent.mdl-button--fab {
+		 background-color: $purple4;
+		 border-bottom: 10px solid #4D4499;
+		 font-weight: bold;
+		 font-size: 16px;
+	}
+}
+

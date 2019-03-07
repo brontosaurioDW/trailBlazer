@@ -1,0 +1,20 @@
+@media screen and (min-width: 768px) {
+	.hero {
+		height: 65vh;
+
+		.btn {
+			width: auto;
+			margin-right: $gap;
+		}
+	}
+}
+
+/*  IPAD PRO PORTRAIT  */
+@media screen and (min-width: 1024px) and (max-height: 1366px) and (orientation: portrait) {
+
+	.hero {
+	    height: 50vh;
+	}
+}
+
+@import '../3-desktop/hero';

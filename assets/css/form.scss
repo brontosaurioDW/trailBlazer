@@ -1,0 +1,73 @@
+.form {
+	input[type="text"],
+	input[type="mail"],
+	input[type="number"] {
+		color: $light;
+		font-weight: $bold;
+		font-size: $x-regular;
+		background: transparent;
+		border: 1px solid #4D4499;
+		border-bottom-width: 10px;
+		text-transform: uppercase;
+		line-height: 40px;
+		display: block;
+		padding: 0 $gap;
+		height: unset;
+	}
+}
+
+.newsletter  {
+	
+	input {
+		margin-bottom: $gap + 5;
+	}
+
+	.btn {
+		width: 100%;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.newsletter {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-align: center;
+		-ms-flex-align: center;
+		-ms-grid-row-align: center;
+		align-items: center;
+		-webkit-box-pack: center;
+		-ms-flex-pack: center;
+		justify-content: center;
+
+		input,
+		.btn {
+			margin: 0;
+		}
+	
+		input {
+			width: 55%;
+		}
+
+		.btn {
+			width: 31%;
+			margin-left: $gap2;
+		}
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	.newsletter {
+		&.main-section {
+			margin-top: 11rem;
+		}
+
+		input {
+			width: 35%;
+		}
+
+		.btn {
+			width: 20%;
+		}
+	}
+}

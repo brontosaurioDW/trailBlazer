@@ -1,0 +1,49 @@
+body {
+	color: $dark;
+	font-size: $x-large;
+	font-family: $body-font;
+	background: $light;
+
+	.dk-bg {
+		color: $light;
+		font-size: $x-large;
+		font-family: $body-font;
+		background: $dark;
+	}
+}
+
+// Social list buttons
+.social {
+
+	li {
+		display: inline-block;
+		vertical-align: middle;
+		margin: 0 $gap - 6;
+
+		a {
+			font-size: $x-large + 6;
+			font-weight: $normal;
+		}
+	}
+
+	&.purple {
+		a {
+			color: $purple4;
+		}
+	}
+}
+
+
+// GENERAL CLASSES
+
+.bold {
+	font-weight: $bold;
+}
+
+.pink {
+	color: $pinky;
+}
+
+.static {
+	position: static;
+}

@@ -1,0 +1,97 @@
+@media screen and (min-width: 992px) {
+
+	.text-block {
+		.title-line {
+		    margin-bottom: $gap * 3;
+		}
+
+		p {
+			line-height: 195%,
+		}
+	}
+
+	.white-block {
+		padding: 90px;
+	}
+
+	.main-section {
+		margin-top: $gap * 8;
+		margin-bottom: $gap * 8;
+	}
+
+	// Homepage modules
+	.about {
+		img {
+		    width: 60%;
+		    margin: 0 auto;
+		    display: block;
+		}
+	}
+
+	// Deco
+	.cross-orange-lg {
+		position: relative;
+
+		&:after {
+			content: '';
+		    position: absolute;
+		    display: block;
+		    left: -75px;
+		    bottom: -75px;
+		    background: url(../img/cross-orange-lg.png) no-repeat 0 0 transparent;
+		    background-size: 100%;
+		    width: 150px;
+		    height: 150px;
+		}
+	}
+
+	.deco-purple-cross {
+	    height: 195px;
+	    background-size: auto 100%;
+	    margin: 10rem 0;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+
+
+	.line-text-decoration {
+		h4 {
+		    min-height: unset;
+		}
+	}
+
+	.white-block {
+	    padding: $gap2 * 3 $gap2 * 5;
+
+	    &.deco-pink-rombo {
+	    	padding: $gap2 * 4 $gap2 * 5 $gap2 * 3;
+	    }
+	}
+	
+	// Homepage modules
+	.code {
+		margin-top: $gap2 * 6;
+	}
+
+	// Deco 
+	.deco-pink-rombo { 
+		margin-top: $gap2 * 8;
+
+		&:before {
+		    width: 180px;
+		    height: 180px;
+		    top: -90px;
+		    margin-left: -90px;
+		}
+	}
+
+	.cross-orange-lg {
+		&:after {
+		    left: -90px;
+		    bottom: -90px;
+		    width: 180px;
+		    height: 180px;
+		}
+	}
+}

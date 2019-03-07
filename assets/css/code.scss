@@ -1,0 +1,17 @@
+.code-snippet {
+	border-radius: 3px;
+	border: 1px solid #4D4499;
+	border-bottom-width: 10px;
+	padding: 0;
+	margin: 0;
+	font-weight: $normal;
+}
+
+pre {
+	overflow: hidden;
+    height: unset;
+    margin: 0;
+    min-height: unset;
+    line-height: normal;
+    display: block;
+}

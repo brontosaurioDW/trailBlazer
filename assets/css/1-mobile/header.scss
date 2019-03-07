@@ -1,0 +1,99 @@
+header {	
+	padding-top: 1.5rem;
+	padding-bottom: 1.5rem;
+	background: transparent;
+	position: fixed;
+	left: 0;
+	top: 0;
+	right: 0;
+	z-index: 10;
+	transition: 0.3s;
+
+	&.sticky {
+		background: $purple4;
+	}
+
+	.navbar-toggler {
+		color: $light;
+		padding: 0;
+		border: 0;
+		margin: 5px 0 0 0;
+		float: right;
+		font-size: $x-large + 5;
+		outline: none;
+
+		.fa-bars {
+			display: none;
+		}
+
+		.fa-times {
+			display: block;
+			font-size: $x-large + 10;
+		}
+
+		&.collapsed {
+			.fa-bars {
+				display: block;
+			}
+
+			.fa-times {
+				display: none;
+			}
+		}
+	}
+
+	.navbar-collapse {
+		background: $purple4;
+		top: 75px;
+		padding: $gap;
+		position: absolute;
+		left: 0;
+		right: 0;
+
+		ul {
+			height: calc(100vh - 105px);
+		}
+	}
+
+	.navbar {
+		padding: 0;
+	}
+
+	h1 {
+		font-size: 0;
+		color: transparent;
+		line-height: normal;
+		margin: 0;
+		float: left;
+		
+		a {
+			font-size: 0;
+			color: transparent;
+			display: inline-block;
+		    width: 165px;
+		    height: 35px;
+		    background: url(../img/logo.png) no-repeat center center;
+		    background-size: 100%;
+		}
+	}
+
+	ul {
+		text-align: center;
+
+		li {
+			margin: $gap 0;
+		}
+
+		a {
+			color: $light;
+			font-weight: $bold;
+			font-size: $x-regular;
+
+			&:hover {
+				color: $light;
+			}
+		}
+	}
+}
+
+@import '../2-tablet/header';

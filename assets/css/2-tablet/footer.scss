@@ -1,0 +1,23 @@
+@media screen and (min-width: 768px) {
+	.logo-footer {
+	    width: 135px;
+	    height: 30px;
+	    background-size: 100%;
+	}
+
+	footer {
+		ul {
+			li {
+				display: inline-block;
+				vertical-align: middle;
+				margin: $gap $gap + 5 0;
+			}
+		}
+
+		.social {
+			text-align: right;
+		}
+	}
+}
+
+@import '../3-desktop/footer';

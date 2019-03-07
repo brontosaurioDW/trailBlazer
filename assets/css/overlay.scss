@@ -1,0 +1,16 @@
+.overlay {
+	padding: $gap + 10;
+	margin-bottom: $gap + 5;
+	margin-top: $gap + 5;
+
+	p {
+		font-weight: $semibold;
+		font-size: $large;
+		line-height: 165%;
+		margin: 0;
+	}
+}
+
+.overlay-purple {
+	background-color: rgba(#002351, 0.75);
+}

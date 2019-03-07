@@ -1,0 +1,42 @@
+.logo-footer {
+	font-size: 0;
+	color: transparent;
+	display: inline-block;
+	margin: 0 auto $gap;
+	width: 195px;
+	height: 35px;
+	background: url('../img/logo.png') no-repeat center center;
+}
+
+footer {
+	margin-top: 5rem;
+	padding-bottom: 2rem;
+	text-align: center;
+
+	ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+
+		li {
+			margin: $gap 0;
+		}
+		
+		a {
+			font-weight: $bold;
+			font-size: $regular;
+			text-transform: uppercase;
+		}
+	}
+
+	a {
+		color: $light;
+
+		&:hover {
+			text-decoration: none;
+			color: $light;
+		}
+	}
+}
+
+@import '../2-tablet/footer';

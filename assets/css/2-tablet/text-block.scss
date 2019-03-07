@@ -1,0 +1,69 @@
+@media screen and (min-width: 768px) {
+	.text-block {
+		&.right {
+			text-align: right;
+		}
+
+		&.center {
+			text-align: center;
+		}
+	}
+
+	.white-block {
+	    .btn {
+	    	width: auto;
+	    }
+
+	    h3 {
+	    	i {
+		        font-size: $large * 2;
+		        margin-left: $gap;
+		    }
+		}
+
+		p {
+			margin-bottom: 2rem;
+		}
+	}
+
+	.main-section {
+		margin-top: $gap2 * 2;
+		margin-bottom: $gap2 * 2;
+	}
+
+	// Homepage modules
+	.about {
+		img {
+			width: 80%;
+		}
+	}
+
+	// Deco
+	.deco-pink-rombo {
+		position: relative;
+		padding-top: 6rem;
+		margin-top: 10em;
+
+		&:before {
+			content: '';
+		    position: absolute;
+		    display: block;
+		    left: 50%;
+		    top: -75px;
+		    background: url(../img/rombo-pink-sm.png) no-repeat 0 0 transparent;
+		    background-size: 100%;
+		    width: 150px;
+		    height: 150px;
+		    margin-left: -75px;
+		}
+	}
+
+	.deco-purple-cross {
+		display: block;
+	    height: 500px;
+	    background: url(../img/cross-purple-lg.png) no-repeat center center;
+	    background-size: 35%;
+	}
+}
+
+@import '../3-desktop/text-block';
