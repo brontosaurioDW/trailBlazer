@@ -266,7 +266,7 @@ pre {
   .newsletter input {
     width: 35%; }
   .newsletter .btn {
-    width: 20%; } }
+    width: auto; } }
 
 .overlay {
   padding: 25px;
@@ -456,7 +456,8 @@ i.orange {
 i.pink {
   color: #FF355D; }
 
-.line-text-decoration h4 {
+.line-text-decoration h4,
+.line-text-decoration h3 {
   font-size: 22px;
   font-weight: 600;
   padding-bottom: 20px;
@@ -464,7 +465,8 @@ i.pink {
   text-transform: uppercase;
   position: relative;
   min-height: 5rem; }
-  .line-text-decoration h4:after {
+  .line-text-decoration h4:after,
+  .line-text-decoration h3:after {
     position: absolute;
     content: '';
     display: block;
@@ -474,6 +476,9 @@ i.pink {
     left: 50%;
     margin-left: -17px;
     bottom: 0; }
+  .line-text-decoration h4.orange-bg:after,
+  .line-text-decoration h3.orange-bg:after {
+    background: #FF6E28; }
 
 .line-text-decoration > div {
   margin-bottom: 30px; }
@@ -487,6 +492,43 @@ i.pink {
   .white-block h3 i {
     display: inline;
     margin: 0; }
+
+.transparent-block {
+  margin: 0 15px;
+  padding: 60px; }
+  .transparent-block h3,
+  .transparent-block p {
+    color: #ffffff; }
+
+.small-white-block {
+  margin: 0 15px;
+  padding: 60px;
+  background: #ffffff; }
+  .small-white-block h3,
+  .small-white-block p,
+  .small-white-block ul {
+    color: #3D3580; }
+
+.bullet-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0; }
+  .bullet-list li {
+    margin: 10px 0;
+    padding-left: 26px;
+    line-height: 20px;
+    background: url(../img/circle-pink-sm.png) no-repeat 0 0 transparent; }
+    .bullet-list li.blocked {
+      background: url(../img/cross-orange-sm.png) no-repeat 0 0 transparent; }
+      .bullet-list li.blocked span {
+        position: relative; }
+        .bullet-list li.blocked span:before {
+          border-bottom: 2px solid #FF6E28;
+          position: absolute;
+          content: "";
+          width: calc(100% + 25px);
+          left: -16px;
+          top: 7px; }
 
 .main-section {
   margin-top: 30px;
@@ -556,13 +598,28 @@ i.pink {
       background-size: 100%;
       width: 150px;
       height: 150px; }
+  .cross-orange-md {
+    width: 80px;
+    height: 80px;
+    display: block;
+    margin: auto;
+    background: url(../img/cross-orange-md.png) no-repeat 0 0 transparent;
+    background-size: contain; }
+  .circle-pink-md {
+    width: 80px;
+    height: 80px;
+    display: block;
+    margin: auto;
+    background: url(../img/circle-pink-md.png) no-repeat 0 0 transparent;
+    background-size: contain; }
   .deco-purple-cross {
     height: 110px;
     background-size: auto 100%;
     margin: 10rem 0; } }
 
 @media screen and (min-width: 1200px) {
-  .line-text-decoration h4 {
+  .line-text-decoration h4,
+  .line-text-decoration h3 {
     min-height: unset; }
   .white-block {
     padding: 90px 150px; }

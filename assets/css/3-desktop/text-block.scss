@@ -45,6 +45,24 @@
 		}
 	}
 
+	.cross-orange-md {
+		    width: 80px;
+		    height: 80px;
+		    display: block;
+		    margin: auto;
+		    background: url(../img/cross-orange-md.png) no-repeat 0 0 transparent;
+		    background-size: contain;
+	}
+
+	.circle-pink-md {
+		    width: 80px;
+		    height: 80px;
+		    display: block;
+		    margin: auto;
+		    background: url(../img/circle-pink-md.png) no-repeat 0 0 transparent;
+		    background-size: contain;
+	}	
+
 	.deco-purple-cross {
 	    height: 110px;
 	    background-size: auto 100%;
@@ -56,7 +74,8 @@
 
 
 	.line-text-decoration {
-		h4 {
+		h4,
+		h3 {
 		    min-height: unset;
 		}
 	}
