@@ -2,10 +2,10 @@
 	input[type="text"],
 	input[type="mail"],
 	input[type="number"] {
+		background: $dark;
 		color: $light;
 		font-weight: $bold;
 		font-size: $x-regular;
-		background: transparent;
 		border: 1px solid #4D4499;
 		border-bottom-width: 10px;
 		text-transform: uppercase;

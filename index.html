@@ -5,9 +5,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         <title>Trailblazer</title>
-        <link rel="stylesheet" type="text/css"  href="dist/css/vendor.css" >
-        <link rel="stylesheet" type="text/css"  href="dist/css/styles.css" >
-        <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700,800" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="dist/css/vendor.css?v=1.0" >
+        <link rel="stylesheet" type="text/css" href="node_modules/highlight.js/styles/tomorrow-night-blue.css">
+        <link rel="stylesheet" type="text/css" href="dist/css/styles.css?v=1.0" >
+        <link href="https://fonts.googleapis.com/css?family=Raleway:200,300,400,500,600,700,800" rel="stylesheet">
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     </head>
     <body>
@@ -140,12 +141,12 @@
                                 </p>
                             </div>
                             <div class="col-md-6">
-<pre><code class="ruby code-snippet wow fadeIn">
-    class Application::Policy < Pundit::Policy
-        def create?
-            user.can_create?(model)
-        end
-    end
+<pre><code class="ruby dark code-snippet wow fadeIn d-block">
+class Application::Policy < Pundit::Policy
+    def create?
+        user.can_create?(model)
+     end
+end
 </code></pre>
                             </div>
                         </div>

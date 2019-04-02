@@ -10,6 +10,11 @@ body {
 		font-family: $body-font;
 		background: $dark;
 	}
+
+	.lg-bg {
+		color: $purple4;
+		background: $lg-bg;
+	}
 }
 
 // Social list buttons
@@ -36,8 +41,20 @@ body {
 
 // GENERAL CLASSES
 
+.lighter {
+	font-weight: $lighter;
+}
+
+.medium {
+	font-weight: $medium;
+}
+
 .bold {
 	font-weight: $bold;
+}
+
+.semibold {
+	font-weight: $semibold;
 }
 
 .pink {

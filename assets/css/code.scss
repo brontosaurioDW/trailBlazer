@@ -1,10 +1,13 @@
 .code-snippet {
 	border-radius: 3px;
 	border: 1px solid #4D4499;
-	border-bottom-width: 10px;
-	padding: 0;
+	border-bottom-width: 8px;
+	display: inline-block;
 	margin: 0;
+	line-height: normal;
+	padding: $gap $gap2 $gap2 $gap2;
 	font-weight: $normal;
+	font-size: $regular;
 }
 
 pre {

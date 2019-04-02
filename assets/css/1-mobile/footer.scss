@@ -5,13 +5,17 @@
 	margin: 0 auto $gap;
 	width: 195px;
 	height: 35px;
-	background: url('../img/logo.png') no-repeat center center;
 }
 
 footer {
 	margin-top: 5rem;
 	padding-bottom: 2rem;
 	text-align: center;
+
+	.logo-footer {
+		background: url('../img/logo.png') no-repeat center center;
+		background-size: cover;
+	}
 
 	ul {
 		list-style-type: none;
@@ -35,6 +39,24 @@ footer {
 		&:hover {
 			text-decoration: none;
 			color: $light;
+		}
+	}
+}
+
+.lg-bg {
+
+	footer {
+		.logo-footer {
+			background: url('../img/logo-dark.png') no-repeat center center;
+			background-size: cover;
+		}
+
+		a {
+			color: $dark;
+
+			&:hover {
+				color: $dark;
+			}
 		}
 	}
 }

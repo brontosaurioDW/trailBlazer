@@ -9,6 +9,19 @@
 		background-color: $dark;
 	}
 
+	&.documentation {
+		background-color: $lg-bg;
+		padding-bottom: 28vh;
+		height: 90vh;
+		background-image: url(../img/hero-docu.png);
+		background-position: bottom center;
+
+		h2,
+		li {
+			color: $light;
+		}
+	}
+
 	h2 {
 		font-size: 3rem;
 		text-transform: uppercase;
@@ -18,6 +31,23 @@
 	.btn {
 		width: 100%;
 		margin-bottom: $gap;
+	}
+
+	ul {
+		padding: 0;
+		margin: 0;
+		list-style: none;
+
+		li {
+			margin: 5px 15px 5px 0;
+			display: inline-block;
+			font-size: $x-large;
+			font-weight: $semibold;
+		}
+
+		i {
+			margin-right: 10px;
+		}
 	}
 }
 
