@@ -59,7 +59,8 @@ i.pink {
 }
 
 .line-text-decoration {
-	h4 {
+	h4,
+	h3 {
 		font-size: $large + 4;
 	    font-weight: $semibold;
 	    padding-bottom: $gap + 5;
@@ -78,6 +79,12 @@ i.pink {
 	    	left: 50%;
 	    	margin-left: -17px;
 	    	bottom: 0;
+	    }
+
+	    &.orange-bg {
+	    	&:after {
+		    	background: $sun;
+		    }
 	    }
 	}
 
@@ -101,6 +108,56 @@ i.pink {
     		margin: 0;
     	}
     }
+}
+
+.transparent-block {
+	margin: 0 15px;
+    padding: $gap4;
+
+    h3,
+    p {
+    	color: $light;
+    }
+
+}
+
+.small-white-block {
+	margin: 0 15px;
+    padding: $gap4;
+    background: $light;
+
+    h3,
+    p,
+    ul {
+    	color: $purple4;
+    }
+
+}
+
+.bullet-list {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	li {
+		margin: 10px 0;
+	    padding-left: 26px;
+    	line-height: 20px;
+		background: url(../img/circle-pink-sm.png) no-repeat 0 0 transparent;
+		&.blocked {
+			background: url(../img/cross-orange-sm.png) no-repeat 0 0 transparent;
+			span {
+				position: relative;
+				&:before {
+					border-bottom: 2px solid $sun;
+			        position: absolute;
+			        content: "";
+			             width: calc(100% + 25px);
+					    left: -16px;
+					    top: 7px;
+				}
+			}
+		}
+	}
 }
 
 .main-section {
