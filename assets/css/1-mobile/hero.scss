@@ -4,9 +4,14 @@
 	background-position: center center;
 
 	&.homepage {
-		background-image: url(../img/hero.png);
-		background-repeat: no-repeat;
+		/* background-image: url(../img/hero.png);
+		background-repeat: no-repeat; */
 		background-color: $dark;
+
+		.container {
+			position: relative;
+			z-index: 2;
+		}
 	}
 
 	&.documentation {
@@ -50,5 +55,46 @@
 		}
 	}
 }
+
+.parallax {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+
+    .parallax-part {
+    	background-position: bottom center;      
+		background-repeat: no-repeat;
+		background-size: cover;
+		position: absolute;
+		top: 0;
+		right: 0;
+		left: 0;
+    }
+
+    .front {        
+        background-image: url(../img/front.png);  
+        z-index: 3;
+        bottom: -70px;
+    }
+
+    .middle {
+        background-image: url(../img/middle.png);
+        z-index: 2;
+        bottom: -35px;
+    }
+
+    .back {
+	    background-image: url(../img/back.png);
+	    z-index: 1;
+	    bottom: -30px;
+    } 
+}
+
 
 @import '../2-tablet/hero';

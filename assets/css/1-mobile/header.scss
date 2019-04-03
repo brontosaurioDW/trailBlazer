@@ -1,6 +1,6 @@
 header {	
-	padding-top: 1.5rem;
-	padding-bottom: 1.5rem;
+	padding-top: 1.2rem;
+	padding-bottom: 1.2rem;
 	background: transparent;
 	position: fixed;
 	left: 0;
@@ -44,7 +44,7 @@ header {
 
 	.navbar-collapse {
 		background: $purple4;
-		top: 75px;
+		top: 65px;
 		padding: $gap;
 		position: absolute;
 		left: 0;
@@ -87,7 +87,7 @@ header {
 		a {
 			color: $light;
 			font-weight: $bold;
-			font-size: $x-regular;
+			font-size: $x-regular - 1;
 
 			&:hover {
 				color: $light;

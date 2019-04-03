@@ -2,7 +2,15 @@
 	header {
 		.navbar-collapse {
 			background: transparent;
-			position: static;
+			position: static;			
+			padding: 0;
+
+			ul {
+				-webkit-box-pack: end;
+				-ms-flex-pack: end;
+				justify-content: flex-end;
+				margin-right: -15px;
+			}
 		}
 	}
 }

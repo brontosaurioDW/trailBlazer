@@ -5,9 +5,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         <title>Trailblazer</title>
-        <link rel="stylesheet" type="text/css" href="dist/css/vendor.css?v=1.0" >
+        <link rel="stylesheet" type="text/css" href="dist/css/vendor.css" >
         <link rel="stylesheet" type="text/css" href="node_modules/highlight.js/styles/tomorrow-night-blue.css">
-        <link rel="stylesheet" type="text/css" href="dist/css/styles.css?v=1.0" >
+        <link rel="stylesheet" type="text/css" href="dist/css/styles.css" >
         <link href="https://fonts.googleapis.com/css?family=Raleway:200,300,400,500,600,700,800" rel="stylesheet">
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     </head>
@@ -15,10 +15,10 @@
         <div class="dk-bg">
             <header id="header">
                 <div class="container">
-                    <nav class="row static navbar navbar-expand-lg">
-                        <div class="col-lg-4">
+                    <nav class="row static navbar navbar-expand-lg justify-content-between">
+                        <div class="col-lg-3">
                             <h1>
-                            <a href="#">TrailBlazer</a>
+                                <a href="#">TrailBlazer</a>
                             </h1>
                             
                             <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navBarTrailBlazer" aria-controls="navBarTrailBlazer" aria-expanded="false" aria-label="Toggle navigation">
@@ -26,38 +26,39 @@
                                 <i class="fal fa-times"></i>
                             </button>
                         </div>
-                        <div class="static col-lg-8">
+                        <div class="static col-lg-9">
                             <div class="collapse navbar-collapse justify-content-end" id="navBarTrailBlazer">
                                 <div class="container">
-                                   <ul class="navbar-nav">
-                                       <li>
-                                           <a class="nav-item nav-link active" href="#">HOME</a>
-                                       </li>
-                                       <li>
-                                           <a class="nav-item nav-link" href="#">SERVICES</a>
-                                       </li>
-                                       <li>
-                                           <a class="nav-item nav-link" href="#">FEAUTURES</a>
-                                       </li>
-                                       <li>
-                                           <a class="nav-item nav-link" href="#">GALLERY</a>
-                                       </li>
-                                       <li>
-                                           <a class="nav-item nav-link" href="#">PRICING</a>
-                                       </li>
-                                       <li>
-                                           <a class="nav-item nav-link" href="#">DOWNLOAD</a>
-                                       </li>
-                                   </ul> 
+                                    <ul class="navbar-nav">
+                                        <li>
+                                            <a class="nav-item nav-link active" href="#hero">HOME</a>
+                                        </li>
+                                        <li>
+                                            <a class="nav-item nav-link" href="#about">ABOUT</a>
+                                        </li>
+                                        <li>
+                                            <a class="nav-item nav-link" href="#features">FEAUTURES</a>
+                                        </li>
+                                        <li>
+                                            <a class="nav-item nav-link" href="#code">CODE</a>
+                                        </li>
+                                        <li>
+                                            <a class="nav-item nav-link" href="#pricing">PRICING</a>
+                                        </li>
+                                        <li>
+                                            <a class="nav-item nav-link" href="#premium">GO PREMIUM</a>
+                                        </li>
+                                    </ul>
                                 </div>                                
                             </div>
                         </div>
                     </nav>
                 </div>
             </header>
+
             <main>
                 <!-- Homepage Hero -->
-                <section class="hero homepage d-flex align-items-center">
+                <section class="hero homepage d-flex align-items-center" id="hero">
                     <div class="container">
                         <div class="row">
                             <div class="col-md-8 col-lg-7">
@@ -72,11 +73,16 @@
                             </div>
                         </div>
                     </div>
+                    <div class="parallax">
+                        <div class="parallax-part front" data-parallax='{"y" : -600}'></div>
+                        <div class="parallax-part middle" data-parallax='{"y" : -300}'></div>
+                        <div class="parallax-part back" data-parallax='{"y" : -150}'></div>
+                    </div>
                 </section>
                 
                 <div class="container">
                     <!-- ABOUT -->
-                    <section class="row main-section about">
+                    <section class="row main-section about" id="about">
                         <div class="col-md-6 d-none d-md-block">
                             <img src="dist/img/deco1.png" alt="Trailblazer" class="img-fluid wow fadeIn">
                         </div>
@@ -88,8 +94,9 @@
                             </p>
                         </div>
                     </section>
+
                     <!-- FEATURES -->
-                    <section class="text-block main-section">
+                    <section class="text-block main-section" id="features">
                         <h2 class="title-line red"> Features </h2>
                         <div class="row line-text-decoration">
                             <div class="col-md-4 text-center">
@@ -115,7 +122,8 @@
                             </div>
                         </div>
                     </section>
-                    <!-- FEATURES -->
+
+                    <!-- BLOCK -->
                     <section class="white-block text-block left main-section cross-orange-lg">
                         <h2 class="title-line red wow fadeIn"> About </h2>
                         <h3 class="wow fadeIn">
@@ -127,8 +135,9 @@
                         </p>
                         <button type="button" class="wow fadeIn btn btn-main mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"> Download app </button>
                     </section>
+
                     <!-- CODE -->
-                    <section class="text-block left main-section code">
+                    <section class="text-block left main-section code" id="code">
                         <h2 class="title-line red wow fadeIn"> Code </h2>
                         <h3 class="wow fadeIn"> Want some code? </h3>
                         <div class="row">
@@ -151,15 +160,12 @@ end
                             </div>
                         </div>
                     </section>
-                    <!-- CODE -->
 
                     <!-- PRICING -->
-                     <section class="row justify-content-md-between main-section about">
-                        
+                    <section class="row justify-content-md-between main-section about" id="pricing">                        
                         <div class="col-md-12 text-block right">
                             <h2 class="title-line red wow fadeIn right"> Pricing </h2>
                         </div>
-
                         <div class="col-md-5 text-block transparent-block">
                             <div class="line-text-decoration">
                                 <div class="text-center wow fadeIn">
@@ -175,7 +181,6 @@ end
                                 </div>
                             </div>
                         </div>
-
                         <div class="col-md-5 text-block small-white-block">
                             <div class="line-text-decoration">
                                 <div class="text-center wow fadeIn">
@@ -191,19 +196,17 @@ end
                                 </div>
                             </div>
                         </div>
-
                     </section>
                     
-
-                    <!-- end PRICING -->
-
-                    <section class="white-block text-block center main-section deco-pink-rombo">
+                    <!-- GO PREMIUM -->
+                    <section class="white-block text-block center main-section deco-pink-rombo" id="premium">
                         <h3 class="wow fadeIn">Go premium</h3>
                         <p class="wow fadeIn">
                             Uh, look me up when you get there. Indeed I will, roll em. I, Doctor Emmett Brown, am about to embark on an historic journey. What have I been thinking of? I almost forgot to bring some extra plutonium. How did I ever expect to get back? One pallet one trip I must be out of my mind. (Einstein begins to whine) What is it Einy? (Spots the Libyans in their van) Oh my god, they found me, I don’t know how but they found me. Run for it, Marty. Who, who? Who do you think, (points) the Libyans. Holy shit.
                         </p>
                         <button type="button" class="wow fadeIn btn btn-main mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"> Learn more </button>
                     </section>
+                    
                     <!-- Newsletter -->
                     <section class="form newsletter main-section wow fadeIn">
                         <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
