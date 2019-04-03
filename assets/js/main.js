@@ -32,6 +32,22 @@ $(document).ready(function(event) {
             }
         }
     });
+
+    // HTML code
+    $('code').each(function() {
+
+
+        if ( $( this ).hasClass( "html" ) ) {
+            var that = $(this);
+            var html = that.html().trim();
+            that.empty();
+            that.text(html);
+        }
+  
+    });
+    
+    hljs.initHighlightingOnLoad();
+
 });
 
 // Header sticky

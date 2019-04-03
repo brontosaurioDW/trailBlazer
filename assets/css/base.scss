@@ -64,3 +64,20 @@ body {
 .static {
 	position: static;
 }
+
+
+
+
+// NOTE: JUST FOR THE STYLEGUIDE - shouldn't be moved to the live site
+
+.styleguide-note {
+	background-color: $pinky;
+	color: #fff;
+	padding: 15px;
+    margin: 30px 0!important;
+}
+
+.html {
+	border-color: $pinky!important;
+	background-color: #ffd9e1;
+}

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <title>Trailblazer Documentation Components</title>
+        <link rel="stylesheet" type="text/css" href="dist/css/vendor.css" >
+        <link rel="stylesheet" type="text/css" href="node_modules/highlight.js/styles/default.css">
+        <link rel="stylesheet" type="text/css" href="dist/css/styles.css" >
+        <link href="https://fonts.googleapis.com/css?family=Raleway:200,300,400,500,600,700,800" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    </head>
+    <body>
+        <div class="lg-bg">
+            <header id="header" class="d-none">
+                <div class="container">
+                    <nav class="row static navbar navbar-expand-lg">
+                        <div class="col-lg-4">
+                            <h1>
+                            <a href="#">TrailBlazer</a>
+                            </h1>
+                            
+                            <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navBarTrailBlazer" aria-controls="navBarTrailBlazer" aria-expanded="false" aria-label="Toggle navigation">
+                                <i class="far fa-bars"></i>
+                                <i class="fal fa-times"></i>
+                            </button>
+                        </div>
+                        <div class="static col-lg-8">
+                            <div class="collapse navbar-collapse justify-content-end" id="navBarTrailBlazer">
+                                <div class="container">
+                                    <ul class="navbar-nav">
+                                        <li>
+                                            <a class="nav-item nav-link active" href="#">HOME</a>
+                                        </li>
+                                        <li>
+                                            <a class="nav-item nav-link" href="#">SERVICES</a>
+                                        </li>
+                                        <li>
+                                            <a class="nav-item nav-link" href="#">FEAUTURES</a>
+                                        </li>
+                                        <li>
+                                            <a class="nav-item nav-link" href="#">GALLERY</a>
+                                        </li>
+                                        <li>
+                                            <a class="nav-item nav-link" href="#">PRICING</a>
+                                        </li>
+                                        <li>
+                                            <a class="nav-item nav-link" href="#">DOWNLOAD</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </header>
+            
+            <main>
+                
+                <section class="documentation-main">
+                    <div class="container-fluid">
+                        <div class="row justify-content-md-center">    
+
+                            <div class="col-lg-8">
+                                <div class="doc-block">
+
+                                    <div class="doc-block">
+                                        <p class="styleguide-note">NOTE: This guide is meant to be used to implement modules in the Trailblazer documentation. You'll find notes from the designers with this format. Styleguide code will be found also in pink.</p>
+                                    </div>
+
+                                    <span class="divider"></span>
+
+                                    <h3>Function API</h3>
+                                    <p>
+                                        Both rendering and parsing have a rich API that allows you to hook into particular steps and change behavior.
+                                    </p>
+                                    <p>
+                                        If that still isn’t enough, you can create your own <a href="#" class="pink semibold">pipeline</a>.
+                                    </p>
+
+<pre><code class="html light code-snippet wow fadeIn">
+<span class="divider"></span>
+
+<h3>Function API</h3>
+<p>
+    Both rendering and parsing have a rich API that allows you to hook into particular steps and change behavior.
+</p>
+<p>
+    If that still isn’t enough, you can create your own <a href="#" class="pink semibold">pipeline</a>.
+</p>
+</code></pre>
+                                    
+                                    <p class="styleguide-note">
+                                    Each section starts and end with a divider. The main title of the selected section should be an h3 and any links should use the classes "pink semibold".
+                                    </p>
+
+                                    <span class="divider"></span>
+                                        
+                                    <div id="overview">
+                                       <h4>Overview</h4>
+
+                                       <a href="#" class="pink">
+                                           <i class="far fa-arrow-alt-circle-right"></i>
+                                           <span class="medium">specification</span>
+                                       </a>
+
+<pre><code class="html light code-snippet wow fadeIn">
+<span class="divider"></span>
+
+<h4>Overview</h4>
+<a href="#" class="pink">
+   <i class="far fa-arrow-alt-circle-right"></i>
+   <span class="medium">specification</span>
+</a>
+</code></pre>                       
+                                    
+                                    <p class="styleguide-note">h4 tags should be used for subtitles and here's also an example for a link.</p>           
+
+                                       <p>Function option are passed to property.</p>
+
+<pre><code class="ruby light code-snippet wow fadeIn">
+property :id, default: "n/a"
+</code></pre>
+
+<pre><code class="html light code-snippet wow fadeIn">
+<pre><code class="ruby light code-snippet wow fadeIn">
+property :id, default: "n/a"
+</code></pre>
+</code></pre>  
+
+                                    <p class="styleguide-note">Code is applied using the highlight.js plug in.</p>
+
+                                       <p>Most options accept a static value, like a string, or a dynamic lambda.</p>
+
+<pre><code class="ruby light code-snippet wow fadeIn">
+property :id, if: ->(options) { options[:fragment].nil? }
+</code></pre>
+
+                                       <p>
+                                           The options hash is passed to all options and has the following members. {doc: doc, options: options, represented: represented, decorator: self}
+                                       </p>
+
+                                       <div class="table-responsive">
+                                           <table class="table">
+                                               <tr>
+                                                   <td>
+                                                       <pre>options[:doc]</pre>
+                                                   </td>
+                                                   <td>
+                                                       When rendering, the document as it gets created. When parsing, the entire document.
+                                                   </td>
+                                               </tr>
+                                               <tr>
+                                                   <td>
+                                                       <pre>options[:binding]</pre>
+                                                   </td>
+                                                   <td>
+                                                       The current binding instance. This allows to access the currently used definition, e.g.
+                                                       <pre>options[:binding][:name]</pre>
+                                                   </td>
+                                               </tr>
+                                               <tr>
+                                                   <td>
+                                                       <pre>options[:doc]</pre>
+                                                   </td>
+                                                   <td>
+                                                       When rendering, the document as it gets created. When parsing, the entire document.
+                                                   </td>
+                                               </tr>
+                                           </table>
+                                       </div>
+
+<pre><code class="html light code-snippet wow fadeIn">
+<div class="table-responsive">
+   <table class="table">
+       <tr>
+           <td>
+               <pre>options[:doc]</pre>
+           </td>
+           <td>
+               When rendering, the document as it gets created. When parsing, the entire document.
+           </td>
+       </tr>
+       <tr>
+           <td>
+               <pre>options[:binding]</pre>
+           </td>
+           <td>
+               The current binding instance. This allows to access the currently used definition, e.g.
+               <pre>options[:binding][:name]</pre>
+           </td>
+       </tr>
+       <tr>
+           <td>
+               <pre>options[:doc]</pre>
+           </td>
+           <td>
+               When rendering, the document as it gets created. When parsing, the entire document.
+           </td>
+       </tr>
+   </table>
+</div>
+
+</code></pre>
+                                    
+                                    <p class="styleguide-note">
+                                    This is a table, and a nice one at that ¯\_(ツ)_/¯
+                                    </p>                                       
+
+                                    
+                                    </div>                                    
+
+                                </div>
+
+
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+            </main>
+
+        </div>
+
+        <script src="dist/js/vendor.js"></script>
+        <script src="dist/js/main.js"></script>
+
+    </body>
+</html>
