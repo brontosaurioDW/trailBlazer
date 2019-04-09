@@ -30,7 +30,7 @@ $(document).ready(function(event) {
     });
 
     // wow.js plugin -- For smooth effect
-    window.wow.init();
+    new WOW().init();
 
     // Smooth scroll anchor tag
     $('a[href*="#"]').not('[href="#"]').not('[href="#0"]').on('click', function(event) {
@@ -58,15 +58,12 @@ $(document).ready(function(event) {
 
     // HTML code
     $('code').each(function() {
-
-
         if ( $( this ).hasClass( "html" ) ) {
             var that = $(this);
             var html = that.html().trim();
             that.empty();
             that.text(html);
         }
-  
     });
     
     hljs.initHighlightingOnLoad();

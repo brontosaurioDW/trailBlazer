@@ -1,58 +1,90 @@
 var gulp        = require('gulp');
 var sass        = require('gulp-sass');
+var concatCss   = require('gulp-concat-css');
 var concat      = require('gulp-concat');
-/*var uglify = require('gulp-uglify');*/
+var uglify      = require('gulp-uglify');
 var imagemin    = require('gulp-imagemin');
-var browserify  = require('browserify');
-var source      = require('vinyl-source-stream');
-var buffer      = require('vinyl-buffer');
+var rimraf      = require('rimraf');
+var cleanCss    = require('gulp-clean-css');
+sass.compiler   = require('node-sass');
 
 var paths = {
-    css: [
+    scripts: [
+        'assets/js/**/*.js', 
+        'assets/js/*.js'
+    ],
+    images: [
+        'assets/img/**/*', 
+        'assets/img/*'
+    ],
+    styles: [
+        //'assets/css/*.scss',
+        //'assets/css/**/*.scss'
         'assets/css/main.scss'
     ],
-    js: [
-        'assets/js/*.js',
-        'assets/js/**/*.js'
+    vendorCSS: [
+        'assets/vendor/css/*.css', 
+        'assets/vendor/css/**/*.css'
     ],
-    jsDest: 'dist/js/'
+    vendorJS: [
+        'assets/vendor/js/*.js', 
+        'assets/vendor/js/**/*.js'
+    ],
+    fonts: [
+        'assets/vendor/webfonts/*'
+    ]
 };
 
-gulp.task('default', function() {
-    return gulp.src('assets/img/*')
-        .pipe(imagemin())
-        .pipe(gulp.dest('dist/img'))
-});
-
-gulp.task('browserify', function() {
-  return browserify('assets/vendor/vendor.js')
-    .bundle()
-    .pipe(source('vendor.js'))
-    .pipe(buffer())
-    .pipe(gulp.dest('dist/js'));
-});
-
-gulp.task('vendorCss', function() {
-    return gulp.src('assets/vendor/vendor.css')
+// Minify and copy Sass Files
+gulp.task('sass', function() {
+    return gulp.src(paths.styles)
+        .pipe(sass().on('error', sass.logError))
+        .pipe(cleanCss())
         .pipe(gulp.dest('dist/css/'));
 });
 
+// Minify and copy vendor CSS
+gulp.task('vendorCSS', function() {
+    return gulp.src(paths.vendorCSS)
+        .pipe(concatCss("vendor.css"))
+        .pipe(gulp.dest('dist/css/'));
+});
+
+// Minify and copy all JavaScript (except vendor JavaScript)
 gulp.task('scripts', function() {
-    return gulp.src(paths.js)
+    return gulp.src(paths.scripts)
+        .pipe(uglify())
         .pipe(concat('main.js'))
-        .pipe(gulp.dest(paths.jsDest))
+        .pipe(gulp.dest('dist/js'));
 });
 
-gulp.task('sass', function() {
-    return gulp.src(paths.css)
-        .pipe(concat('styles.css'))
-        .pipe(sass())
-        .pipe(gulp.dest('dist/css'))
+// Minify and copy vendor JavaScript
+gulp.task('vendorJS', function() {
+    return gulp.src(paths.vendorJS)
+        .pipe(uglify())
+        .pipe(concat('vendor.js'))
+        .pipe(gulp.dest('dist/js'));
 });
 
+// Copy Fonts
+gulp.task('fonts', function() {
+    return gulp.src(paths.fonts)
+    .pipe(gulp.dest('dist/webfonts'));
+});
+
+// Copy all static images
+gulp.task('images', function() {
+    return gulp.src(paths.images)
+        .pipe(imagemin({
+            optimizationLevel: 5
+        }))
+        .pipe(gulp.dest('dist/img'));
+});
+
+// Watch changes
 gulp.task('watch', function() {
-    gulp.watch(paths.css, gulp.series('default'));;
-    gulp.watch(paths.css, gulp.series('vendorCss'));;
-    gulp.watch(paths.css, gulp.series('sass'));;
-    gulp.watch(paths.js, gulp.series('scripts'));
+    gulp.watch(paths.scripts, ['scripts']);
+    gulp.watch(paths.images, ['images']);
 });
+
+gulp.task('default', ['scripts', 'sass', 'images', 'watch', 'vendorJS', 'vendorCSS']);
