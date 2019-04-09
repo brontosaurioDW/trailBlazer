@@ -1,8 +1,10 @@
 .sidebar-scroll {
 	margin-top: $gap2;
+	position: sticky;
+	top: 105px;
 
 	h3 {
-		font-size: $x-large + 2;
+		font-size: $large;
 		font-weight: $bold;
 		color: $purple4;
 

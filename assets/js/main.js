@@ -6,6 +6,29 @@ $(document).ready(function(event) {
         hljs.highlightBlock(block);
     });
 
+    // Slider
+    $('.slider').slick({
+        dots: false,
+        infinite: true,
+        speed: 400,
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        responsive: [{
+                breakpoint: 991,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2
+                }
+            }, {
+                breakpoint: 767,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+        ]
+    });
+
     // wow.js plugin -- For smooth effect
     window.wow.init();
 
@@ -18,7 +41,7 @@ $(document).ready(function(event) {
             if (target.length) {
                 event.preventDefault();
                 $('html, body').animate({
-                    scrollTop: target.offset().top - '160'
+                    scrollTop: target.offset().top - '90'
                 }, 1000, function() {
                     var $target = $(target);
                     $target.focus();

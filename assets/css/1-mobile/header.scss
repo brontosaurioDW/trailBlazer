@@ -9,8 +9,9 @@ header {
 	z-index: 10;
 	transition: 0.3s;
 
-	&.sticky {
-		background: $purple4;
+	&.sticky,
+	&.session-show {
+		background: #211b3f;
 	}
 
 	.navbar-toggler {
@@ -70,8 +71,8 @@ header {
 			font-size: 0;
 			color: transparent;
 			display: inline-block;
-		    width: 165px;
-		    height: 35px;
+			width: 125px;
+			height: 30px;
 		    background: url(../img/logo.png) no-repeat center center;
 		    background-size: 100%;
 		}

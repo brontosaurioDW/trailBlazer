@@ -14,6 +14,10 @@
 		padding: 90px;
 	}
 
+	.dark-block {
+		padding: 90px;
+	}
+
 	.main-section {
 		margin-top: $gap * 8;
 		margin-bottom: $gap * 8;
@@ -68,6 +72,43 @@
 	    background-size: auto 100%;
 	    margin: 10rem 0;
 	}
+
+	.quotes {
+		&:before,
+		&:after {		
+			position: absolute;
+		    content: '';
+		    display: block;
+		    width: 120px;
+		    height: 150px;
+		    background-size: 100% auto;
+		    background-repeat: no-repeat;
+		}
+
+		&:before {
+			background-image: url('../img/quote-open.png');
+			left: -30px;
+			top: -90px;
+		}
+
+		&:after {
+			background-image: url('../img/quote-close.png');
+			right: -30px;
+			bottom: -20px;
+		}
+	}
+
+	.transparent-block {
+	    padding: $gap4;
+	}
+
+	.small-white-block {
+	    padding: $gap4;
+	}
+
+	.two-columns {
+		margin: 150px 0;
+	}
 }
 
 @media screen and (min-width: 1200px) {
@@ -87,6 +128,11 @@
 	    	padding: $gap2 * 4 $gap2 * 5 $gap2 * 3;
 	    }
 	}
+
+	.dark-block {
+		padding: $gap2 * 3 $gap2 * 5;
+	}
+
 	
 	// Homepage modules
 	.code {

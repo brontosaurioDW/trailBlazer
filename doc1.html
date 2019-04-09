@@ -13,7 +13,8 @@
     </head>
     <body>
         <div class="lg-bg">
-            <header id="header">
+            <!-- Add class="session-show" if you need a header with dark background -->
+            <header id="header" class="">
                 <div class="container">
                     <nav class="row static navbar navbar-expand-lg">
                         <div class="col-lg-4">
@@ -58,26 +59,35 @@
             
             <main>
                 <!-- Homepage Hero -->
-                <section class="hero homepage documentation d-flex align-items-center">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <h2>Representable: Function Api</h2>
-                                <ul>
-                                    <li>
-                                        <i class="far fa-clock pink"></i>
-                                        <span> Last updated 05 May 2017</span>
-                                    </li>
-                                    <li>
-                                        <i class="far fa-gem pink"></i>
-                                        <span> representable <span class="pink">v3.0</span></span>
-                                    </li>
-                                </ul>
+                <!-- Add class="session-show" if you need to show this module -->
+                <div class="session-show">
+                    <section class="hero homepage documentation d-flex align-items-center">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <h2 class="w-100">Representable: Function Api</h2>
+                                    <ul>
+                                        <li>
+                                            <i class="far fa-clock pink"></i>
+                                            <span> Last updated 05 May 2017</span>
+                                        </li>
+                                        <li>
+                                            <i class="far fa-gem pink"></i>
+                                            <span> representable <span class="pink">v3.0</span></span>
+                                        </li>
+                                    </ul>                       
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </section>
+                        <div class="parallax doc">
+                            <div class="parallax-part front" data-parallax='{"y" : -250}'></div>
+                            <div class="parallax-part middle" data-parallax='{"y" : -450}'></div>
+                            <div class="parallax-part back" data-parallax='{"y" : -300}'></div>
+                        </div>
+                    </section>
+                </div>
                 
+                <!-- Add class="session-active" if the session is not new-->
                 <section class="documentation-main">
                     <div class="container-fluid">
                         <div class="row">    
@@ -158,7 +168,24 @@
                             </div>
 
                             <div class="col-lg-8">
-                                <div class="doc-block">
+
+                                <!-- Add class="session-show" if you need to show this module -->
+                                <div class="doc-block section-name session-hide"> 
+                                    <h2 class="w-100">Representable: Function Api</h2>
+                                    <ul>
+                                        <li>
+                                            <i class="far fa-clock pink"></i>
+                                            <span> Last updated 05 May 2017</span>
+                                        </li>
+                                        <li>
+                                            <i class="far fa-gem pink"></i>
+                                            <span> representable <span class="pink">v3.0</span></span>
+                                        </li>
+                                    </ul>     
+                                </div>
+                                <!-- @end session-show -->
+
+                                <div class="doc-block">    
 
                                     <span class="divider"></span>
 
@@ -183,13 +210,38 @@
                                        <p>Function option are passed to property.</p>
 
 <pre><code class="ruby light code-snippet wow fadeIn">
-property :id, default: "n/a"
+
+    a = 'hello'
+    b = a.dup
+    class &#60;&#60;a
+      def to_s
+        'The value is '#{self}''
+      end
+      def twoTimes
+        self + self
+      end
+    end
+    a.to_s  »   'The value is 'hello''
+    a.twoTimes  »   'hellohello'
+    b.to_s  »   'hello'
+
 </code></pre>
 
                                        <p>Most options accept a static value, like a string, or a dynamic lambda.</p>
 
 <pre><code class="ruby light code-snippet wow fadeIn">
-property :id, if: ->(options) { options[:fragment].nil? }
+    = Synopsis
+    ...
+    See ((<Return Codes>)) for details.
+    ..
+    == Instance Methods
+
+    --- Tempfile.open( filename )
+        Opens the file...
+
+    == Return Codes
+    ..
+    The method ((<Tempfile.open>)) raises an (({IOException}))...
 </code></pre>
 
                                        <p>
@@ -251,9 +303,21 @@ if: ->(fragment:, **) { fragment.nil? }
                                 </aside>
 
                                 <!-- Newsletter -->
-                                <section class="form newsletter main-section wow fadeIn">
-                                    <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
-                                    <button type="button" class="btn btn-main mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"> Keep me updated </button>
+                                <section class="early-adopter center main-section wow fadeIn">
+                                    <h2>Hello hello early birds</h2>
+
+                                    <div class="row">
+                                        <div class="col-md-10 offset-md-1">                                
+                                            <p>
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ac ligula convallis, mollis velit eu, porta odio. Proin nibh ipsum, bibendum eu auctor volutpat, consectetur vitae erat. Duis condimentum dapibus hendrerit. 
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <form action="" method="" class="form newsletter">
+                                        <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                                        <button type="button" class="btn btn-main mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"> Keep me updated </button>
+                                    </form>
                                 </section>
                             </div>
 
@@ -265,7 +329,7 @@ if: ->(fragment:, **) { fragment.nil? }
                                     </h3>
 
                                     <ul class="vertical menu">
-                                        <li><a href="#overview" class="active">Overview</a></li>
+                                        <li><a href="#" class="active">Overview</a></li>
                                         <li><a href="#">Options</a></li>
                                         <li><a href="#">As</a></li>
                                         <li><a href="#">Getter</a></li>

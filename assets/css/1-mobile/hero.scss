@@ -4,8 +4,6 @@
 	background-position: center center;
 
 	&.homepage {
-		/* background-image: url(../img/hero.png);
-		background-repeat: no-repeat; */
 		background-color: $dark;
 
 		.container {
@@ -16,10 +14,10 @@
 
 	&.documentation {
 		background-color: $lg-bg;
-		padding-bottom: 28vh;
-		height: 80vh;
-		background-image: url(../img/hero-docu.png);
-		background-position: bottom center;
+    	padding-bottom: 15vh;
+	    min-height: 580px;
+	    height: 65vh;
+	    position: relative;
 
 		h2,
 		li {
@@ -80,7 +78,7 @@
     .front {        
         background-image: url(../img/front.png);  
         z-index: 3;
-        bottom: -70px;
+        bottom: -200px;
     }
 
     .middle {
@@ -94,6 +92,29 @@
 	    z-index: 1;
 	    bottom: -30px;
     } 
+
+    &.doc {
+    	background-color: $lg-bg;
+    	min-height: 580px;
+    	height: 65vh;
+
+	    .front {        
+	        background-image: url(../img/docu-front.png);  
+	        z-index: 2;
+	        bottom: 15px;
+	    }
+
+	    .middle {
+	        background-image: url(../img/docu-middle.png);
+	        z-index: 3;
+	        bottom: 0;
+	    }
+
+	    .back {
+		    background-image: url(../img/docu-back.png);
+		    bottom: 0;
+	    } 
+    }
 }
 
 

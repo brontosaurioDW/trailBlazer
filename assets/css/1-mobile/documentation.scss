@@ -1,5 +1,38 @@
 .documentation-main {
 	padding: 0 50px;
+
+	.code-snippet {
+		width: 100%;
+		margin-top: 15px;
+		line-height: 150%;
+	}
+
+	&.session-active {
+		padding-top: $gap2 * 4;
+	}
+}
+
+.section-name {
+	h2 {
+		font-size: 3rem;
+	}
+
+	ul {
+		padding: 0;
+		margin: 0;
+		list-style: none;
+
+		li {
+			margin: 5px 15px 5px 0;
+			display: inline-block;
+			font-size: $x-large;
+			font-weight: $semibold;
+		}
+
+		i {
+			margin-right: 10px;
+		}
+	}
 }
 
 .doc-block {
