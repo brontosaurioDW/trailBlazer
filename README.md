@@ -41,6 +41,7 @@ _These are the tasks set in gulpfile.js_
 * gulp vendorJS
 * gulp vendorCSS
 
+
 ### gulp scripts 
 
 Compiles the files from:
@@ -61,7 +62,7 @@ ___
 
 ### gulp sass 
 
-This watchs the next file:
+This watches the next file:
 
 ```
 'assets/css/main.scss'
@@ -91,7 +92,7 @@ It copies and optimizes the images from:
 To:
 
 ```
-dist/css/vendor.css
+dist/images/
 ```
 
 ___
