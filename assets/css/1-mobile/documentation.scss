@@ -26,7 +26,7 @@
 			margin: 5px 15px 5px 0;
 			display: inline-block;
 			font-size: $x-large;
-			font-weight: $semibold;
+			font-weight: $normal;
 		}
 
 		i {
@@ -57,22 +57,6 @@
 		font-size: $large;
 		line-height: 170%;
 		font-weight: $medium;
-	}
-
-	ul {
-		list-style: none;
-		padding: 0;
-		margin: 20px 0 30px;
-
-		li {
-			background: url(../img/circle-pink-sm.png) no-repeat left center transparent;
-			background-size: 10px auto;
-			font-size: 15px;
-			line-height: normal;
-			font-weight: 500;
-			padding-left: 25px;
-			margin: 15px 0;
-		}
 	}
 
 	.divider {

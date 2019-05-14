@@ -1,0 +1,128 @@
+---
+layout: doc
+title: Operation 2.1 API
+gems:
+  - ["trailblazer-operation", "trailblazer/trailblazer-operation", "2.1"]
+code: ../trailblazer/test/docs,trace_test.rb,master
+---
+
+<span class="divider"></span>
+
+### Function API
+
+Both rendering and parsing have a rich API that allows you to hook into particular steps and change behavior.
+
+If that still isn’t enough, you can create your own <a href="#" class="pink semibold">pipeline</a>.
+
+<span class="divider"></span>
+
+<div id="overview">
+   <h4>Overview</h4>
+</div>
+
+   <a href="#" class="pink">
+       <i class="far fa-arrow-alt-circle-right"></i>
+       <span class="medium">specification</span>
+   </a>
+
+Function option are passed to property.
+
+<span class="divider"></span>
+
+<%= snippet "activity" %>
+
+
+    <h3>Function API</h3>
+    <p>
+    </p>
+
+
+       <p></p>
+
+<pre><code class="ruby light code-snippet wow fadeIn">
+
+    a = 'hello'
+    b = a.dup
+    class &#60;&#60;a
+      def to_s
+        'The value is '#{self}''
+      end
+      def twoTimes
+        self + self
+      end
+    end
+    a.to_s  »   'The value is 'hello''
+    a.twoTimes  »   'hellohello'
+    b.to_s  »   'hello'
+
+</code></pre>
+
+                                       <p>Most options accept a static value, like a string, or a dynamic lambda.</p>
+
+<pre><code class="ruby light code-snippet wow fadeIn">
+    = Synopsis
+    ...
+    See ((<Return Codes>)) for details.
+    ..
+    == Instance Methods
+
+    --- Tempfile.open( filename )
+        Opens the file...
+
+    == Return Codes
+    ..
+    The method ((<Tempfile.open>)) raises an (({IOException}))...
+</code></pre>
+
+                                       <p>
+                                           The options hash is passed to all options and has the following members. {doc: doc, options: options, represented: represented, decorator: self}
+                                       </p>
+
+                                       <div class="table-responsive">
+                                           <table class="table">
+                                               <tr>
+                                                   <td>
+                                                       <pre>options[:doc]</pre>
+                                                   </td>
+                                                   <td>
+                                                       When rendering, the document as it gets created. When parsing, the entire document.
+                                                   </td>
+                                               </tr>
+                                               <tr>
+                                                   <td>
+                                                       <pre>options[:binding]</pre>
+                                                   </td>
+                                                   <td>
+                                                       The current binding instance. This allows to access the currently used definition, e.g.
+                                                       <pre>options[:binding][:name]</pre>
+                                                   </td>
+                                               </tr>
+                                               <tr>
+                                                   <td>
+                                                       <pre>options[:doc]</pre>
+                                                   </td>
+                                                   <td>
+                                                       When rendering, the document as it gets created. When parsing, the entire document.
+                                                   </td>
+                                               </tr>
+                                           </table>
+                                       </div>
+
+                                       <p>
+                                           In your option function, you can either receive the entire options hash and use it in the block.
+                                       </p>
+
+<pre><code class="ruby light code-snippet wow fadeIn">
+if: ->(options) { options[:fragment].nil? }
+</code></pre>
+
+                                       <p>
+                                           Or, and that is the preferred way, use Ruby’s keyword arguments.
+                                       </p>
+
+<pre><code class="ruby light code-snippet wow fadeIn">
+if: ->(fragment:, **) { fragment.nil? }
+</code></pre>
+    </div>
+
+    <span class="divider"></span>

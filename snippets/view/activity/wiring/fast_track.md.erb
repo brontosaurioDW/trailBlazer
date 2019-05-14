@@ -1,0 +1,64 @@
+
+### Fast Track
+
+You can "short-circuit" specific tasks using a built-in mechanism called _fast track_.
+
+#### Fast Track: pass_fast
+
+To short-circuit the successful connection of a task use `:pass_fast`.
+
+<%= code "pf-op", collapse: "pf-methods" %>
+
+If `validate` turned out to be successful, no other task won't be invoked, as visible in the diagram.
+
+<img src="/images/2.1/trailblazer/memo-pass-fast.png">
+
+As you can see, `validate` will still be able to deviate to the left track, but all following success tasks like `index` can't be reached anymore, so this option has its limits. You might use `:pass_fast` with multiple steps.
+
+#### Fast Track: fail_fast
+
+The `:fail_fast` option comes in handy when having to early-out from the error (left) track.
+
+<%= code "ff-op", collapse: "ff-methods" %>
+
+The marked task(s) will be connected to the fail-fast end.
+
+<img src="/images/2.1/trailblazer/memo-fail-fast.png">
+
+There won't be an ongoing connection to the next left track task. As always, you can use that option multiple times, all fail_fast connections will end on the same `End.fail_fast` end.
+
+#### Fast Track: fail_fast with step
+
+You can also use `:fail_fast` with `step` tasks.
+
+<%= code "ff-step-op", collapse: "ff-step-methods" %>
+
+The resulting diagram shows that `index` won't hit any other left track boxes in case of failure, but errors-out directly.
+
+<img src="/images/2.1/trailblazer/memo-fail-fast-step.png">
+
+All fail_fast connections will end on the same `End.fail_fast` end.
+
+#### Fast Track: fast_track
+
+Instead of hard-wiring the success or failure output to the respective fast-track end, you can decide what output to take dynamically, in the task. However, this implies you configure the task using the `:fast_track` option.
+
+<%= code "ft-step-op", collapse: "ft-step-methods" %>
+
+By marking a task with `:fast_track`, you can create up to four different outputs from it.
+
+<img src="/images/2.1/trailblazer/memo-fast-track.png">
+
+Both `create_model` and `assign_errors` have two more outputs in addition to their default ones: one to `End.pass_fast`, one to `End.fail_fast` (note that this option works with `pass`, too). To make the execution take one of the fast-track paths, you need to emit a special signal from that task, though.
+
+<%= code "ft-create" %>
+
+In this example, the operation would end successfully with an instantiated `Memo` model and no other steps taken, if called with an imaginary option `create_empty_model: true`. This is because it then returns the `Railway.pass_fast!` signal. Here's what the invocation could look like.
+
+<%= code "ft-call" %>
+
+Identically, the task on the left track `assign_errors`, could pick what path it wants the token to travel.
+
+<%= code "ft-call-err" %>
+
+This time, the second error handler `log_errors` won't be hit.
