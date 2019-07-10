@@ -1,0 +1,183 @@
+/*
+Trailbootstrap
+*
+
+1. Alerts
+2. Badge
+3. Breadcrumb
+4. Buttons
+5. Button group
+6. Card
+
+
+
+*/
+
+
+
+// 1. Alerts
+
+.alert {
+	.alert-text {
+		font-weight: $medium;
+	    font-size: $x-regular;
+	    .alert-link {
+	    	cursor: pointer;
+	    	font-weight: $bold;
+	    }
+	}
+	&.alert-primary {
+		background: $lg-purple2;
+		border-color: $lg-purple2-b;
+		color: $light;
+		.alert-link {
+			color: $pineapple;
+		}
+		.close {
+			color: $purple2;
+			text-shadow: none;
+		}
+	}
+	&.alert-secondary {
+		background: $lg-pinky;
+		border-color: $lg-pinky-b;
+		color: $light;
+		.alert-link {
+			color: $pineapple;
+		}
+		.close {
+			color: $pinky;
+			text-shadow: none;
+		}
+	}
+	&.alert-success {
+		background: $lg-grass;
+		border-color: $lg-grass-b;
+		color: $light;
+		.alert-link {
+			color: $pineapple;
+		}
+		.close {
+			color: $grass;
+			text-shadow: none;
+		}
+	}
+	&.alert-danger {
+		background: $lg-sun2;
+		border-color: $lg-sun2-b;
+		color: $light;
+		.alert-link {
+			color: $pineapple;
+		}
+		.close {
+			color: $sun2;
+			text-shadow: none;
+		}
+	}
+	&.alert-warning {
+		background: $lg-sun;
+		border-color: $lg-sun-b;
+		color: $light;
+		.alert-link {
+			color: $pineapple;
+		}
+		.close {
+			color: $sun;
+			text-shadow: none;
+		}
+	}
+	&.alert-info {
+		background: $lg-ocean;
+		border-color: $lg-ocean-b;
+		color: $light;
+		.alert-link {
+			color: $pineapple;
+		}
+		.close {
+			color: $ocean;
+			text-shadow: none;
+		}
+	}
+	&.alert-light {
+		background: transparent;
+		border-color: $lg-purple2;
+		color: $lg-purple2;
+		.alert-link {
+			color: $pinky;
+		}
+		.close {
+			color: $purple2;
+			text-shadow: none;
+		}
+	}
+	&.alert-dark {
+		background: $lg-wine2;
+		border-color: $lg-wine2-b;
+		color: $light;
+		.alert-link {
+			color: $pineapple;
+		}
+		.close {
+			color: $wine2;
+			text-shadow: none;
+		}
+	}
+}
+
+
+// 2. Badge
+
+.badge {
+	&.badge-primary {
+		background-color: $purple2;
+	}
+	&.badge-secondary {
+		background-color: $pinky;
+	}
+	&.badge-success {
+		background-color: $grass;
+	}
+	&.badge-danger {
+		background-color: $sun2;
+	}
+	&.badge-warning {
+		background-color: $sun;
+		color: $light;
+	}
+	&.badge-info {
+		background-color: $ocean;
+	}
+	&.badge-light {
+		background-color: transparent;
+		border: 1px solid $purple2;
+		color: $purple2;
+	}
+	&.badge-dark {
+		background-color: $wine2;
+	}
+}
+
+
+
+// 3. Breadcrumb
+
+.breadcrumb {
+    border-radius: 3px;
+    border: 1px solid $pineapple;
+    border-bottom-width: 8px;
+    background-color: transparent;
+    .breadcrumb-item {
+    	a {
+			color: $purple;
+    	}
+    	&.active {
+    		color: $sun;
+    	}
+    }
+}
+
+// 4. Buttons
+
+//5. Button group
+
+// Check buttons.scss

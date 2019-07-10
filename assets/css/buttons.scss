@@ -16,10 +16,77 @@ a,
 
 	&.mdl-button--accent.mdl-button--accent.mdl-button--raised, 
 	&.mdl-button--accent.mdl-button--accent.mdl-button--fab {
-		 background-color: $purple4;
-		 border-bottom: 10px solid #4D4499;
+		 border-bottom: 10px solid;
 		 font-weight: bold;
 		 font-size: 16px;
+
+		 &.btn-primary {
+			background-color: $purple4;
+			border-color: $md-purple4;
+		}
+
+		&.btn-secondary {
+			background-color: $pinky;
+			border-color: $md-pinky;
+		}
+
+		&.btn-success {
+			background-color: $grass;
+			border-color: $md-grass;
+		}
+
+		&.btn-danger {
+			background-color: $sun2;
+			border-color: $md-sun2;
+		}
+
+		&.btn-warning {
+			background-color: $sun;
+			border-color: $md-sun;
+		}
+
+		&.btn-light {
+			background-color: transparent;
+			border: 1px solid $pinky;
+			border-bottom: 10px solid;
+			color: $pinky;
+		}
+
 	}
+
+	&.btn-primary {
+		background-color: $purple4;
+		border-color: $md-purple4;
+	}
+
+	&.btn-secondary {
+		background-color: $pinky;
+		border-color: $md-pinky;
+	}
+
+	&.btn-success {
+		background-color: $grass;
+		border-color: $md-grass;
+	}
+
+	&.btn-danger {
+		background-color: $sun2;
+		border-color: $md-sun2;
+	}
+
+	&.btn-warning {
+		background-color: $sun;
+		border-color: $md-sun;
+	}
+
+	&.btn-light {
+		background-color: transparent;
+		border: 1px solid $pinky;
+		border-bottom: 10px solid;
+		color: $pinky;
+	}
+
+	
+
 }
 
