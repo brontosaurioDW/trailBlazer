@@ -13,12 +13,12 @@ a,
 	line-height: 40px;
 	height: unset;	
 	padding: 0 $gap + 20;
+	font-weight: bold;
+	font-size: 16px;
+	border-bottom: 10px solid;
 
 	&.mdl-button--accent.mdl-button--accent.mdl-button--raised, 
 	&.mdl-button--accent.mdl-button--accent.mdl-button--fab {
-		 border-bottom: 10px solid;
-		 font-weight: bold;
-		 font-size: 16px;
 
 		 &.btn-primary {
 			background-color: $purple4;
@@ -57,26 +57,41 @@ a,
 	&.btn-primary {
 		background-color: $purple4;
 		border-color: $md-purple4;
+		&:hover {
+			color: $light;
+		}
 	}
 
 	&.btn-secondary {
 		background-color: $pinky;
 		border-color: $md-pinky;
+		&:hover {
+			color: $light;
+		}
 	}
 
 	&.btn-success {
 		background-color: $grass;
 		border-color: $md-grass;
+		&:hover {
+			color: $light;
+		}
 	}
 
 	&.btn-danger {
 		background-color: $sun2;
 		border-color: $md-sun2;
+		&:hover {
+			color: $light;
+		}
 	}
 
 	&.btn-warning {
 		background-color: $sun;
 		border-color: $md-sun;
+		&:hover {
+			color: $light;
+		}
 	}
 
 	&.btn-light {
@@ -84,9 +99,17 @@ a,
 		border: 1px solid $pinky;
 		border-bottom: 10px solid;
 		color: $pinky;
+		&:hover {
+			color: $light;
+		}
 	}
 
-	
+}
 
+.btn-group {
+	.btn {
+		font-size: 14px;
+		border-bottom: 1px solid;
+	}
 }
 
