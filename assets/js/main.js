@@ -29,6 +29,28 @@ $(document).ready(function(event) {
         ]
     });
 
+    $('.slider-dots').slick({
+        dots: true,
+        infinite: true,
+        speed: 400,
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        responsive: [{
+                breakpoint: 991,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2
+                }
+            }, {
+                breakpoint: 767,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+        ]
+    });
+
     // wow.js plugin -- For smooth effect
     new WOW().init();
 

@@ -178,7 +178,7 @@ Trailbootstrap
 
 // 4. Buttons
 
-//5. Button group
+// 5. Button group
 
 // Check buttons.scss
 
@@ -187,5 +187,136 @@ Trailbootstrap
 .card {
 	background-color: transparent;
 	border-color: $pinky; 
+	.card-header {
+		background-color: $pinky;
+		color: $light;
+		h2, h3, h4, h5, h6 {
+			margin: 0;
+			font-size: $x-regular;
+			font-weight: $semibold;
+			line-height: normal;
+		}
+	}
+	.list-group {
+		.list-group-item {
+			background-color: transparent;
+			border-color: $pinky;
+		}
+	}
+	.card-footer {
+		background-color: $lg-pinky;
+		border-color: $pinky;
+		p {
+			margin: 0;
+			color: $light;
+			font-size: $regular;
+		}
+	}
+	.card-title {
+		margin: 0;
+	}
 
+	&.card-alt {
+		background-color: $lg-pineapple;
+		color: $pinky;
+		border-color: $lg-pineapple-b;
+		.card-footer {
+			background-color: $lg-pineapple-b;
+			border-color: $lg-pineapple-b;
+			p {
+				margin: 0;
+				color: $pinky;
+				font-size: $regular;
+			}
+		}
+	}
 }
+
+//6. Carousel
+
+.any-slider {
+	&.slider-doc {
+		width: 90%;
+		left: 5%;
+	}
+	.slick-dots {
+		display: flex;
+		justify-content: center;
+		
+		margin: 0;
+		padding: 1rem 0;
+		
+		list-style-type: none;
+	
+		li {
+			margin: 0 0.25rem;
+		}
+	
+		button {
+			display: block;
+			width: 1rem;
+			height: 1rem;
+			padding: 0;
+			
+			border: none;
+			border-radius: 100%;
+			background-color: $purple4;
+			
+			text-indent: -9999px;
+		}
+	
+		li.slick-active button {
+			background-color: $pinky;
+		}
+	
+	}
+}
+
+// 7. Collapse
+
+.collapse {
+	.card {
+		margin-top: 15px;
+	}
+}
+
+
+.collapse,
+.accordion {
+	.card {
+		p {
+			margin: 0;
+			font-size: $x-regular;
+		}
+		.card-header {
+			background-color: $md-pinky;
+			h2, h3, h4, h5, h6, p {
+				button {
+					background-color: transparent;
+					border: none;
+					color: $light;
+					font-size: $x-regular;
+					font-weight: $semibold;
+				}
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
