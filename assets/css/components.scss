@@ -8,6 +8,9 @@ Trailbootstrap
 4. Buttons
 5. Button group
 6. Card
+7. Carousel
+8. Collapse
+9. Dropdowns
 
 
 
@@ -232,7 +235,7 @@ Trailbootstrap
 	}
 }
 
-//6. Carousel
+//7. Carousel
 
 .any-slider {
 	&.slider-doc {
@@ -272,7 +275,7 @@ Trailbootstrap
 	}
 }
 
-// 7. Collapse
+// 8. Collapse
 
 .collapse {
 	.card {
@@ -303,7 +306,34 @@ Trailbootstrap
 	}
 }
 
+// 9. Dropdown
 
+.dropdown {
+	.dropdown-toggle {
+		&:after {
+		    content: "\f0dd";
+    		font-family: 'Font Awesome 5 Pro';
+    		border: none;
+		}
+	}
+	&.show {
+		.dropdown-toggle {
+			background-color: $pinky;
+			border-color: $md-pinky;
+		}
+	}
+	.dropdown-menu {
+		background-color: $lg-pinky;
+    	border-color: $pinky;
+    	a {
+    		color: $light;
+    		font-size: $x-regular;
+    	}
+    	.dropdown-divider {
+    		border-color: $pinky;
+    	}
+	}
+}
 
 
 
