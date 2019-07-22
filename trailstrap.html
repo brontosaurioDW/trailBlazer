@@ -126,6 +126,13 @@
                                                 <li><a href="#modal">Modal</a></li>
                                                 <li><a href="#navs">Navs</a></li>
                                                 <li><a href="#navbar">Navbar</a></li>
+                                                <li><a href="#pagination">Pagination</a></li>
+                                                <li><a href="#popovers">Popovers</a></li>
+                                                <li><a href="#progress">Progress</a></li>
+                                                <li><a href="#scrollspy">Scrollspy</a></li>
+                                                <li><a href="#spinners">Spinners</a></li>
+                                                <li><a href="#toasts">Toasts</a></li>
+                                                <li><a href="#tooltips">Tooltips</a></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -1210,53 +1217,540 @@
 
                                     <div id="forms">
                                         <h4>Forms</h4>
+                                        <p>What's better than interacting with people that visit our site? Whit forms, now you can!</p>
 
-                                        <form>
+                                        <form class="normal-form">
                                             <div class="form-group">
-                                                <label for="exampleInputEmail1">Email address</label>
+                                                <label class="form-label" for="exampleInputEmail1">Email address</label>
                                                 <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
                                                 <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                                             </div>
                                             <div class="form-group">
-                                                <label for="exampleInputPassword1">Password</label>
+                                                <label class="form-label" for="exampleInputPassword1">Password</label>
                                                 <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
                                             </div>
-                                            <div class="form-group form-check">
-                                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                                <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                                            <div class="form-group">
+
+                                                <label class="checkbox-container"><span class="form-label">Check me out</span>
+                                                    <input type="checkbox" checked="checked">
+                                                    <span class="checkmark"></span>
+                                                </label>
+
                                             </div>
                                             <button type="submit" class="btn btn-primary">Submit</button>
                                         </form>
+
+<pre><code class="html light code-snippet wow fadeIn">
+
+<form class="normal-form">
+    <div class="form-group">
+        <label class="form-label" for="exampleInputEmail1">Email address</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
+    <div class="form-group">
+        <label class="form-label" for="exampleInputPassword1">Password</label>
+        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+    </div>
+    <div class="form-group">
+
+        <label class="checkbox-container"><span class="form-label">Check me out</span>
+            <input type="checkbox" checked="checked">
+            <span class="checkmark"></span>
+        </label>
+
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+
+</code></pre>                                         
+
+                                        <p>More form controls:</p>
+                                        
+                                        <form>
+                                            <div class="form-group">
+                                                <label class="form-label" for="exampleFormControlInput1">Email address</label>
+                                                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="form-label" for="exampleFormControlSelect1">Example select</label>
+                                                <select class="form-control" id="exampleFormControlSelect1">
+                                                    <option>1</option>
+                                                    <option>2</option>
+                                                    <option>3</option>
+                                                    <option>4</option>
+                                                    <option>5</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="form-label" for="exampleFormControlTextarea1">Example textarea</label>
+                                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="form-label" for="">Favourite Power Ranger</label>
+                                                <label class="radio-container">
+                                                    <span class="form-label">Red</span>
+                                                    <input type="radio" checked="checked" name="radio">
+                                                    <span class="radio-circle"></span>
+                                                </label>
+                                                <label class="radio-container">
+                                                    <span class="form-label">Blue</span>
+                                                    <input type="radio" name="radio">
+                                                    <span class="radio-circle"></span>
+                                                </label>
+                                                <label class="radio-container">
+                                                    <span class="form-label">Yellow</span>
+                                                    <input type="radio" name="radio">
+                                                    <span class="radio-circle"></span>
+                                                </label>
+                                                <label class="radio-container">
+                                                    <span class="form-label">Pink</span>
+                                                    <input type="radio" name="radio">
+                                                    <span class="radio-circle"></span>
+                                                </label>
+                                                <label class="radio-container">
+                                                    <span class="form-label">Black</span>
+                                                    <input type="radio" name="radio">
+                                                    <span class="radio-circle"></span>
+                                                </label>
+                                            </div>
+                                        </form>
+
+<pre><code class="html light code-snippet wow fadeIn">
+
+<form>
+    <div class="form-group">
+        <label class="form-label" for="exampleFormControlInput1">Email address</label>
+        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+    </div>
+    <div class="form-group">
+        <label class="form-label" for="exampleFormControlSelect1">Example select</label>
+        <select class="form-control" id="exampleFormControlSelect1">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label class="form-label" for="exampleFormControlTextarea1">Example textarea</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+    </div>
+    <div class="form-group">
+        <label class="form-label" for="">Favourite Power Ranger</label>
+        <label class="radio-container">
+            <span class="form-label">Red</span>
+            <input type="radio" checked="checked" name="radio">
+            <span class="radio-circle"></span>
+        </label>
+        <label class="radio-container">
+            <span class="form-label">Blue</span>
+            <input type="radio" name="radio">
+            <span class="radio-circle"></span>
+        </label>
+        <label class="radio-container">
+            <span class="form-label">Yellow</span>
+            <input type="radio" name="radio">
+            <span class="radio-circle"></span>
+        </label>
+        <label class="radio-container">
+            <span class="form-label">Pink</span>
+            <input type="radio" name="radio">
+            <span class="radio-circle"></span>
+        </label>
+        <label class="radio-container">
+            <span class="form-label">Black</span>
+            <input type="radio" name="radio">
+            <span class="radio-circle"></span>
+        </label>
+    </div>
+</form>
+
+
+</code></pre>                                         
+
+
+                                        <p>Here's a form with validation:</p>
+
+                                        <form class="was-validated">
+                                            <div class="mb-3">
+                                                <label class="form-label" for="validationTextarea">Tell us about your pets:</label>
+                                                <textarea class="form-control is-invalid" id="validationTextarea" placeholder="Required example textarea" required></textarea>
+                                                <div class="invalid-feedback">
+                                                    Please enter a message in the textarea.
+                                                </div>
+                                            </div>
+                                        </form>
+
+<pre><code class="html light code-snippet wow fadeIn">
+
+<form class="was-validated">
+    <div class="mb-3">
+        <label class="form-label" for="validationTextarea">Tell us about your pets:</label>
+        <textarea class="form-control is-invalid" id="validationTextarea" placeholder="Required example textarea" required></textarea>
+        <div class="invalid-feedback">
+            Please enter a message in the textarea.
+        </div>
+    </div>
+</form>
+
+
+</code></pre>                                          
+
                                     </div>
 
                                     <span class="divider"></span>
 
                                     <div id="inputgroup">
                                         <h4>Input group</h4>
+                                        <p>Add bling bling to your inputs with input groups.</p>
+
+                                        <form>
+                                            <div class="input-group mb-3">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text" id="basic-addon1">@</span>
+                                                </div>
+                                                <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                                            </div>
+                                            <div class="input-group mb-3">
+                                                <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                                                <div class="input-group-append">
+                                                    <span class="input-group-text" id="basic-addon2">@example.com</span>
+                                                </div>
+                                            </div>
+                                            <label class="form-label" for="basic-url">Your vanity URL</label>
+                                            <div class="input-group mb-3">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text" id="basic-addon3">https://example.com/users/</span>
+                                                </div>
+                                                <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+                                            </div>
+                                            <div class="input-group mb-3">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text">$</span>
+                                                </div>
+                                                <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                                                <div class="input-group-append">
+                                                    <span class="input-group-text">.00</span>
+                                                </div>
+                                            </div>
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text">With textarea</span>
+                                                </div>
+                                                <textarea class="form-control" aria-label="With textarea"></textarea>
+                                            </div>
+                                        </form>
+
+<pre><code class="html light code-snippet wow fadeIn">
+
+<form>
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">@</span>
+        </div>
+        <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+    </div>
+    <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+        <div class="input-group-append">
+            <span class="input-group-text" id="basic-addon2">@example.com</span>
+        </div>
+    </div>
+    <label class="form-label" for="basic-url">Your vanity URL</label>
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon3">https://example.com/users/</span>
+        </div>
+        <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+    </div>
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text">$</span>
+        </div>
+        <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+        <div class="input-group-append">
+            <span class="input-group-text">.00</span>
+        </div>
+    </div>
+    <div class="input-group">
+        <div class="input-group-prepend">
+            <span class="input-group-text">With textarea</span>
+        </div>
+        <textarea class="form-control" aria-label="With textarea"></textarea>
+    </div>
+</form>
+
+
+</code></pre>                                          
+
                                     </div>
 
                                     <span class="divider"></span>
 
                                     <div id="listgroup">
                                         <h4>List group</h4>
+                                        <p>So, here's a list group:</p>
+
+                                        <ul class="list-group">
+                                            <li class="list-group-item">Buffy the Vampire Slayer</li>
+                                            <li class="list-group-item">Parks and Recreation</li>
+                                            <li class="list-group-item">The Office</li>
+                                            <li class="list-group-item">Gilmore Girls</li>
+                                            <li class="list-group-item">How I Met Your Mother</li>
+                                        </ul>
+
+<pre><code class="html light code-snippet wow fadeIn">
+
+<ul class="list-group">
+    <li class="list-group-item">Buffy the Vampire Slayer</li>
+    <li class="list-group-item">Parks and Recreation</li>
+    <li class="list-group-item">The Office</li>
+    <li class="list-group-item">Gilmore Girls</li>
+    <li class="list-group-item">How I Met Your Mother</li>
+</ul>
+
+
+</code></pre>                                          
+                
+
+                                        <p>You can also add links with active and disable items to make an awesome menu:</p>
+
+                                        <div class="list-group">
+                                            <a href="#" class="list-group-item list-group-item-action active">
+                                                Dinosaur Island
+                                            </a>
+                                            <a href="#" class="list-group-item list-group-item-action">
+                                                The Gallerist
+                                            </a>
+                                            <a href="#" class="list-group-item list-group-item-action">
+                                                Keyforge: Age of Ascension
+                                            </a>
+                                            <a href="#" class="list-group-item list-group-item-action">
+                                                Roll Player
+                                            </a>
+                                            <a href="#" class="list-group-item list-group-item-action disabled" tabindex="-1" aria-disabled="true">
+                                                Ticket to Ride
+                                            </a>
+                                        </div>
+
+
+
+<pre><code class="html light code-snippet wow fadeIn">
+
+<div class="list-group">
+    <a href="#" class="list-group-item list-group-item-action active">
+        Dinosaur Island
+    </a>
+    <a href="#" class="list-group-item list-group-item-action">
+        The Gallerist
+    </a>
+    <a href="#" class="list-group-item list-group-item-action">
+        Keyforge: Age of Ascension
+    </a>
+    <a href="#" class="list-group-item list-group-item-action">
+        Roll Player
+    </a>
+    <a href="#" class="list-group-item list-group-item-action disabled" tabindex="-1" aria-disabled="true">
+        Ticket to Ride
+    </a>
+</div>
+
+
+</code></pre>  
+
+
                                     </div>
 
                                     <span class="divider"></span>
 
                                     <div id="mediaobject">
                                         <h4>Media object</h4>
+                                        <p>Feel like highlighting something? Add a media object!</p>
+                                        <div class="media">
+                                            <img src="https://www.fillmurray.com/g/64/64" class="mr-3" alt="...">
+                                            <div class="media-body">
+                                                <h5 class="mt-0">Media heading</h5>
+                                                Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                                            </div>
+                                        </div>
+
+<pre><code class="html light code-snippet wow fadeIn">
+
+<div class="media">
+    <img src="https://www.fillmurray.com/g/64/64" class="mr-3" alt="...">
+    <div class="media-body">
+        <h5 class="mt-0">Media heading</h5>
+        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+    </div>
+</div>
+
+
+</code></pre>                                          
+
+                                        <p>You can change the position of the image or the order using flexbox. You'll find details in the <a href="https://getbootstrap.com/docs/4.3/components/media-object/" target="_blank">Bootstrap documentation</a>.</p>
                                     </div>
 
                                     <span class="divider"></span>
 
                                     <div id="modal">
                                         <h4>Modal</h4>
+                                        <p>Click below to get the coolest modal window:</p>
+
+                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                                        Click me!
+                                        </button>
+                                        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalTitle" aria-hidden="true">
+                                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="exampleModalTitle">I am a modal</h5>
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        After Maruck the Marked prevents damage with its armor, capture 1A for each damage just prevented.
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                        <button type="button" class="btn btn-primary">GO!</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+<pre><code class="html light code-snippet wow fadeIn">
+
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+Click me!
+</button>
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalTitle">I am a modal</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                After Maruck the Marked prevents damage with its armor, capture 1A for each damage just prevented.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">GO!</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</code></pre>                                          
+
+                                        <p>The class "modal-dialog-centered" centers the modal vertically, it's completely optional.</p>
                                     </div>
 
                                     <span class="divider"></span>
 
                                     <div id="navs">
                                         <h4>Navs</h4>
+                                        <p>You shouldn't really use Navs on the documentation as the navigation is on the sides, but here's an example just in case.</p>
+
+                                        <ul class="nav">
+                                            <li class="nav-item">
+                                                <i class="nav-icon circle-pink-sm"></i>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link active" href="#">Active</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="#">Link</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="#">Link</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="#">Link</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                                            </li>
+                                        </ul>
+
+<pre><code class="html light code-snippet wow fadeIn">
+
+<ul class="nav">
+    <li class="nav-item">
+        <i class="nav-icon circle-pink-sm"></i>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link active" href="#">Active</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+    </li>
+</ul>
+
+
+</code></pre>
+
+
+                                        <p>You can also use it as tabs:</p>
+
+                                        <ul class="nav nav-tabs">
+                                            <li class="nav-item">
+                                                <a class="nav-link active" href="#">Active</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="#">Link</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="#">Link</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" href="#">Link</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                                            </li>
+                                        </ul>
+
+<pre><code class="html light code-snippet wow fadeIn">
+
+<ul class="nav nav-tabs">
+    <li class="nav-item">
+        <a class="nav-link active" href="#">Active</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+    </li>
+</ul>
+
+
+</code></pre>                                          
+
+                                        <p>sadfsdf</p>
                                     </div>
 
                                     <span class="divider"></span>
@@ -1266,6 +1760,49 @@
                                     </div>
 
                                     <span class="divider"></span>
+
+                                    <div id="pagination">
+                                        <h4>Pagination</h4>
+                                    </div>
+
+                                    <span class="divider"></span>
+
+                                    <div id="popovers">
+                                        <h4>Popovers</h4>
+                                    </div>
+
+                                    <span class="divider"></span>
+
+                                    <div id="progress">
+                                        <h4>Progress</h4>
+                                    </div>
+
+                                    <span class="divider"></span>
+
+                                    <div id="scrollspy">
+                                        <h4>Scrollspy</h4>
+                                    </div>
+
+                                    <span class="divider"></span>
+
+                                    <div id="spinners">
+                                        <h4>Spinners</h4>
+                                    </div>
+
+                                    <span class="divider"></span>
+
+                                    <div id="toasts">
+                                        <h4>Toasts</h4>
+                                    </div>
+
+                                    <span class="divider"></span>
+
+                                    <div id="tooltips">
+                                        <h4>Tooltips</h4>
+                                    </div>
+
+                                    <span class="divider"></span>
+                                    
 
                                 </div>
 
@@ -1300,6 +1837,13 @@
                                         <li><a href="#modal">Modal</a></li>
                                         <li><a href="#navs">Navs</a></li>
                                         <li><a href="#navbar">Navbar</a></li>
+                                        <li><a href="#pagination">Pagination</a></li>
+                                        <li><a href="#popovers">Popovers</a></li>
+                                        <li><a href="#progress">Progress</a></li>
+                                        <li><a href="#scrollspy">Scrollspy</a></li>
+                                        <li><a href="#spinners">Spinners</a></li>
+                                        <li><a href="#toasts">Toasts</a></li>
+                                        <li><a href="#tooltips">Tooltips</a></li>
                                     </ul>
 
                                     <img src="dist/img/deco1.png" alt="Trailblazer" class="wow fadeIn">

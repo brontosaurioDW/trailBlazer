@@ -9,7 +9,7 @@
   "author": "Brontosaurio",
   "license": "ISC",
   "dependencies": {
-    "gulp": "^3.0.0",
+    "gulp": "^3.9.1",
     "gulp-uglifycss": "^1.1.0",
     "npm": "^6.8.0",
     "sass": "^1.13.4"

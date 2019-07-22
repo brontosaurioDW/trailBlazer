@@ -2,15 +2,29 @@
 Trailbootstrap
 *
 
-1. Alerts
-2. Badge
-3. Breadcrumb
-4. Buttons
-5. Button group
-6. Card
-7. Carousel
-8. Collapse
-9. Dropdowns
+01. Alerts
+02. Badge
+03. Breadcrumb
+04. Buttons
+05. Button group
+06. Card
+07. Carousel
+08. Collapse
+09. Dropdowns
+10. Forms
+11. Input group
+12. List group
+13. Media object
+14. Modal
+15. Navs
+16. Pagination 
+17. Popovers
+18. Progress
+19. Scrollspy
+20. Spinners
+21. Toasts
+22. Tooltips
+
 
 
 
@@ -335,18 +349,278 @@ Trailbootstrap
 	}
 }
 
+// 10. Forms
+
+form {
+	.form-label {
+		text-transform: uppercase;
+		font-size: $small;
+		font-weight: $bold;
+	}
+	input,
+	input:hover,
+	input:focus,
+	input:active,
+	.form-control,
+	.form-control:hover,
+	.form-control:focus,
+	.form-control:active {
+		border-color: $purple4;
+		background-color: transparent;
+		color: $purple4;
+	}
+	input:focus,
+	textarea:focus {
+		box-shadow: 0 0 0 0.2rem rgba(61, 53, 128, 0.25);
+	}
+	textarea {
+		resize: none;
+	}
+	.form-text {
+		font-size: $small;
+	}
+
+	.invalid-feedback {
+		color: $sun2;
+	}
+	.is-invalid {
+		border-color: $sun2;
+	}
+	.input-group-prepend,
+	.input-group-append {
+		span {
+			border: 1px solid $md-purple4;
+			background-color: $md-purple4;
+			color: $light;
+		}
+	}
+}
+
+// 10.1 Forms - Checkbox
+
+.checkbox-container {
+	display: block;
+	position: relative;
+	padding-left: 30px;
+	margin-bottom: 12px;
+	cursor: pointer;
+	font-size: 22px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+
+  	input {
+		position: absolute;
+		opacity: 0;
+		cursor: pointer;
+		height: 0;
+		width: 0;
+	}
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 22px;
+  width: 22px;
+  border-radius: 2px;
+  border: 1px solid $purple4;
+}
+
+.checkbox-container {
+	input:checked ~ .checkmark {
+  		background-color: $pinky;
+  		border: none;
+	}
+}
+
+.checkmark:after {
+	content: "";
+	position: absolute;
+	display: none;
+}
+
+.checkbox-container input:checked ~ .checkmark:after {
+	display: block;
+}
+
+.checkbox-container .checkmark:after {
+	left: 9px;
+	top: 5px;
+	width: 5px;
+	height: 10px;
+	border: solid white;
+	border-width: 0 3px 3px 0;
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+
+// 10.2 Forms - Radio
+
+.radio-container {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	align-items: center;
+	position: relative;
+	padding-left: 35px;
+	margin-bottom: 12px;
+	cursor: pointer;
+	font-size: 22px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	input {
+		position: absolute;
+		opacity: 0;
+		cursor: pointer;
+	}
+	.form-label {
+		margin: 0;
+	}
+}
+
+.radio-circle {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 20px;
+	width: 20px;
+	background-color: transparent;
+	border-radius: 50%;
+	border: 1px solid $purple4;
+}
+
+.radio-container input:checked ~ .radio-circle {
+	background-color: $pinky;
+	border: none;
+}
+
+.radio-circle:after {
+	content: "";
+	position: absolute;
+	display: none;
+}
+
+.radio-container input:checked ~ .radio-circle:after {
+	display: block;
+}
+
+.radio-container .radio-circle:after {
+    top: 5px;
+    left: 5px;
+    width: 10px;
+    height: 10px;
+	border-radius: 50%;
+	background: white;
+}
 
 
+// 12. List group
+
+.list-group {
+	.list-group-item {
+		background-color: transparent;
+		border-color: $purple4;
+		font-size: $regular;
+		color: $purple4;
+		&.list-group-item-action {
+			color: $pinky;
+			font-weight: $bold;
+		}
+		&.active {
+			background-color: $lg-purple4;
+			color: $light;
+			font-weight: $bold;	
+		}
+		&.disabled {
+			color: #6c757d;
+		}
+	}
+}
+
+// 13. Media Objects
+
+.media {
+	padding: 15px;
+	border-radius: 4px;
+	border: 1px solid $pineapple;
+	font-size: $small;
+	color: $pinky;
+	h2,
+	h3,
+	h4,
+	h5 {
+		margin-bottom: 5px;
+		font-size: $regular;
+	}
+}
+
+// 14. Modal
+
+.modal {
+	.modal-dialog {
+		.modal-content {
+			background-color: $slg-pinky;
+			border-color: $lg-pinky-b;
+			border-radius: 4px;
+			.modal-header {
+				border-color: $lg-pinky-b;
+				h2,
+				h3,
+				h4,
+				h5 {
+					margin: 0;
+					text-transform: uppercase;
+					font-size: $x-regular;
+				}
+				.close {
+					color: $purple4;
+				}
+			}
+			.modal-body {
+				font-size: $regular;
+			}
+			.modal-footer {
+				border-color: $lg-pinky-b;
+			}			
+		}
+	}
+}
 
 
+// 15. Navs
+
+.nav {
+	border-bottom: 8px solid $pinky;
+	border-radius: 4px;
+	.nav-item,
+	.nav-item a {
+		font-size: $regular;
+		font-weight: $bold;
+		text-transform: uppercase;
+		.nav-icon {
+		    margin-top: 9px;
+		}
+		&.active {
+			color: $purple4;
+		}
+	}
+	&.nav-tabs {
+		.active {
+			background-color: transparent;
+			border: none;
+			border-top: 4px solid $purple4;
+			border-radius: 0;
+		}
+	}
+}
 
 
-
-
-
-
-
-
-
-
+// 16. Pagination
 
