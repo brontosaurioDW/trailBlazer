@@ -20,10 +20,8 @@ Trailbootstrap
 16. Pagination 
 17. Popovers
 18. Progress
-19. Scrollspy
-20. Spinners
-21. Toasts
-22. Tooltips
+19. Spinners
+21. Tooltips
 
 
 
@@ -234,7 +232,7 @@ Trailbootstrap
 	}
 
 	&.card-alt {
-		background-color: $lg-pineapple;
+		background-color: transparent;
 		color: $pinky;
 		border-color: $lg-pineapple-b;
 		.card-footer {
@@ -623,4 +621,118 @@ form {
 
 
 // 16. Pagination
+
+.pagination {
+	.page-item {
+		.page-link {
+			background-color: transparent;
+			border-color: $pineapple;
+			color: $pinky;
+		}
+		&.active {
+			.page-link {
+				background-color: $pineapple;
+				font-weight: $bold;
+			}
+		}
+	}
+}
+
+// 17. Popovers
+
+.popover {
+	border: none;
+	.arrow {
+		&::before {
+			border: none;
+		}
+	}
+	.popover-body {
+		background-color: $slg-pinky;
+		color: $purple4;
+	}
+	&.bs-popover-top {
+		.arrow {
+			&::after {
+				border-top-color: $slg-pinky;
+			}
+		}
+	}
+	&.bs-popover-right {
+		.arrow {
+			&::after {
+				border-right-color: $slg-pinky;
+			}
+		}
+	}
+	&.bs-popover-bottom {
+		.arrow {
+			&::after {
+				border-bottom-color: $slg-pinky;
+			}
+		}
+	}
+	&.bs-popover-left {
+		.arrow {
+			&::after {
+				border-left-color: $slg-pinky;
+			}
+		}
+	}
+}
+
+
+// 18. Progress
+
+.progress {
+	height: 20px;
+	background-color: $lg-purple4;
+	.progress-bar {
+		background-color: $purple4;
+	}
+}
+
+
+// 19. Spinners
+
+.spinner-border {
+    border: 6px solid $purple4;
+    border-radius: 0;
+}
+
+
+// 21. Tooltips
+
+.tooltip-main {
+  background: $pinky;
+  border: none;
+  color: $light;
+}
+
+.tooltip-inner {
+  background: $pinky;
+  color: $light;
+  border: none;
+}
+
+.bs-tooltip-auto[x-placement^=bottom] .arrow::before,
+.bs-tooltip-bottom .arrow::before {
+  border-bottom-color: $pinky;
+}
+
+.bs-tooltip-auto[x-placement^=top] .arrow::before,
+.bs-tooltip-top .arrow::before {
+  border-top-color: $pinky;
+}
+
+.bs-tooltip-auto[x-placement^=left] .arrow::before,
+.bs-tooltip-left .arrow::before {
+  border-left-color: $pinky;
+}
+
+.bs-tooltip-auto[x-placement^=right] .arrow::before,
+.bs-tooltip-right .arrow::before {
+  border-right-color: $pinky;
+}
+
 

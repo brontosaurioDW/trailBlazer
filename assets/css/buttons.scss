@@ -100,10 +100,21 @@ a,
 		border-bottom: 10px solid;
 		color: $pinky;
 		&:hover {
-			color: $light;
+			background-color: transparent;
+			border: 1px solid $pinky;
+			border-bottom: 10px solid;
+			color: $pinky;
 		}
 	}
 
+}
+
+.btn-link {
+	font-size: $regular;
+	font-weight: $bold;
+	text-transform: uppercase;
+	color: $pinky;
+	cursor: pointer;
 }
 
 .btn-group {

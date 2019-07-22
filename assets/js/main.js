@@ -108,3 +108,14 @@ function stickyHeader() {
         header.classList.remove("sticky");
     }
 }
+
+// Bootstrap popovers
+$(function () {
+    $('[data-toggle="popover"]').popover()
+})
+
+// Bootstrap tooltips
+
+$(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+})
