@@ -16,10 +16,52 @@
 	}
 }
 
+.auth {
+	min-height: 100vh;
+	background-size: cover;
+	background-position: center;
+
+	.card {
+		background: $lg-bg;
+
+		h2 {
+			font-size: $x-large + 10;
+			text-transform: uppercase;
+		}
+
+		h3 {
+			font-size: $x-large;
+			text-align: center;
+			text-transform: uppercase;
+		}
+	}
+
+	.social-login {
+		.btn {
+			min-width: unset;
+			max-width: unset;
+		}
+	}
+
+	.link {
+		text-transform: uppercase;
+		font-size: 12px;
+		font-weight: 700;
+	}
+}
+
 .newsletter  {
+
+	&.dark-bg {
+		input {
+			color: $light;
+		}
+	}
 	
 	input {
 		margin-bottom: $gap + 5;
+		line-height: 50px;
+		height: 50px;
 	}
 
 	.btn {

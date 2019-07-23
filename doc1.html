@@ -250,15 +250,6 @@
                                            The options hash is passed to all options and has the following members. {doc: doc, options: options, represented: represented, decorator: self}
                                        </p>
 
-                                       <p>The circuit consists:</p>
-
-                                       <ul class="list">
-                                           <li>Extract domain logic from controller, models and half-baked service objects and rearrange them embraced by an operation.</li>
-                                           <li>Free the model: Validations go to forms (or contracts as we also call them).</li>
-                                           <li>Callback code is triggered from the operation, not the model or controller.</li>
-                                           <li>Authorization happens in policies orchestrated by the operation, not in random places in controller, model, or view.</li>
-                                       </ul>
-
                                        <div class="table-responsive">
                                            <table class="table">
                                                <tr>
@@ -325,9 +316,9 @@ if: ->(fragment:, **) { fragment.nil? }
                                         </div>
                                     </div>
 
-                                    <form action="" method="" class="form newsletter">
+                                    <form action="" method="" class="newsletter">
                                         <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
-                                        <button type="button" class="btn btn-main btn-primary mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"> Keep me updated </button>
+                                        <button type="button" class="btn btn-primary mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"> Keep me updated </button>
                                     </form>
                                 </section>
                             </div>

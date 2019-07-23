@@ -46,7 +46,7 @@ Trailbootstrap
 		border-color: $lg-purple2-b;
 		color: $light;
 		.alert-link {
-			color: $pineapple;
+			color: $lg-purple2-b;
 		}
 		.close {
 			color: $purple2;
@@ -58,7 +58,7 @@ Trailbootstrap
 		border-color: $lg-pinky-b;
 		color: $light;
 		.alert-link {
-			color: $pineapple;
+			color: $lg-pinky-b;
 		}
 		.close {
 			color: $pinky;
@@ -70,7 +70,7 @@ Trailbootstrap
 		border-color: $lg-grass-b;
 		color: $light;
 		.alert-link {
-			color: $pineapple;
+			color: $lg-grass-b;
 		}
 		.close {
 			color: $grass;
@@ -82,7 +82,7 @@ Trailbootstrap
 		border-color: $lg-sun2-b;
 		color: $light;
 		.alert-link {
-			color: $pineapple;
+			color: $lg-sun2-b;
 		}
 		.close {
 			color: $sun2;
@@ -94,7 +94,7 @@ Trailbootstrap
 		border-color: $lg-sun-b;
 		color: $light;
 		.alert-link {
-			color: $pineapple;
+			color: $lg-sun-b;
 		}
 		.close {
 			color: $sun;
@@ -106,7 +106,7 @@ Trailbootstrap
 		border-color: $lg-ocean-b;
 		color: $light;
 		.alert-link {
-			color: $pineapple;
+			color: $lg-ocean-b;
 		}
 		.close {
 			color: $ocean;
@@ -130,7 +130,7 @@ Trailbootstrap
 		border-color: $lg-wine2-b;
 		color: $light;
 		.alert-link {
-			color: $pineapple;
+			color: $lg-wine2-b;
 		}
 		.close {
 			color: $wine2;
@@ -178,7 +178,7 @@ Trailbootstrap
 
 .breadcrumb {
     border-radius: 3px;
-    border: 1px solid $pineapple;
+    border: 1px solid $sun;
     border-bottom-width: 8px;
     background-color: transparent;
     .breadcrumb-item {
@@ -244,6 +244,10 @@ Trailbootstrap
 				font-size: $regular;
 			}
 		}
+	}
+
+	button {
+		outline: none;
 	}
 }
 
@@ -350,6 +354,17 @@ Trailbootstrap
 // 10. Forms
 
 form {
+	.form-group {
+		margin: 1.5rem 0;
+
+		.gj-datepicker-md [role=right-icon] {
+			color: $purple2;
+		    right: 10px;
+		    top: 12px;
+		    font-size: 18px;
+		}
+	}
+
 	.form-label {
 		text-transform: uppercase;
 		font-size: $small;
@@ -364,15 +379,44 @@ form {
 	.form-control:focus,
 	.form-control:active {
 		border-color: $purple4;
-		background-color: transparent;
 		color: $purple4;
+		background-color: transparent;
 	}
+
+	.form-control {		
+		line-height: 40px;
+		height: 40px;
+
+		&.gj-textbox-md {
+			line-height: 40px;
+			height: 40px;
+			border: 1px solid $purple4;
+			color: $purple4;
+			padding: 0.375rem 0.75rem;
+			font-size: 1rem;
+			font-weight: 400;
+			font-family: $body-font;
+		}
+	}
+
+	.form-control:disabled, 
+	.form-control[readonly] {
+		background: transparent;
+	}
+
+	.form-control:focus {
+		box-shadow: none;
+	}
+
 	input:focus,
 	textarea:focus {
 		box-shadow: 0 0 0 0.2rem rgba(61, 53, 128, 0.25);
 	}
 	textarea {
 		resize: none;
+		line-height: 150%;
+		height: auto;
+		min-height: 130px;
 	}
 	.form-text {
 		font-size: $small;
@@ -390,6 +434,32 @@ form {
 			border: 1px solid $md-purple4;
 			background-color: $md-purple4;
 			color: $light;
+		}
+	}
+}
+
+.gj-picker {
+	background: $lg-bg;
+	opacity: 0.95;
+}
+
+.gj-picker-md {
+    color: $purple3;
+    border: 1px solid $purple3;
+    border-radius: 5px;
+}
+
+.gj-picker-md {
+	table tr {
+		td.today {
+			div {
+			    color: $pinky;
+			    font-weight: bold;
+			}
+		}
+
+		td.selected.gj-cursor-pointer div {
+		    background: $purple3;
 		}
 	}
 }

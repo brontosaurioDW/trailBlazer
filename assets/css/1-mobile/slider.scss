@@ -58,11 +58,12 @@
 
  		&.slick-prev {
 			background-image: url(../img/arrow-left.png);
+			left: -20px;
  		}
 
  		&.slick-next {
 			background-image: url(../img/arrow-right.png);
-			right: 0;
+			right: -20px;
  		}
  	}
 

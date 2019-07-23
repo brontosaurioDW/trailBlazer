@@ -90,6 +90,11 @@ $(document).ready(function(event) {
     
     hljs.initHighlightingOnLoad();
 
+    // DATEPICKER
+    if ($('.datepicker').length > 0) {
+        $('.datepicker').datepicker();
+    }
+
 });
 
 // Header sticky

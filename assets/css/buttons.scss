@@ -12,7 +12,7 @@ a,
 .btn {
 	line-height: 40px;
 	height: unset;	
-	padding: 0 $gap + 20;
+	padding: 0 $gap + 15;
 	font-weight: bold;
 	font-size: 16px;
 	border-bottom: 10px solid;
@@ -60,6 +60,17 @@ a,
 		&:hover {
 			color: $light;
 		}
+
+		&:focus,
+		&.focus {
+			box-shadow: none;
+		}
+
+		&:not(:disabled):not(.disabled):active, 
+		.btn-primary:not(:disabled):not(.disabled).active {
+			background-color: $purple4;
+			border-color: $md-purple4;
+		}
 	}
 
 	&.btn-secondary {
@@ -67,6 +78,17 @@ a,
 		border-color: $md-pinky;
 		&:hover {
 			color: $light;
+		}
+
+		&:focus,
+		&.focus {
+			box-shadow: none;
+		}
+
+		&:not(:disabled):not(.disabled):active, 
+		.btn-primary:not(:disabled):not(.disabled).active {
+			background-color: $pinky;
+			border-color: $md-pinky;
 		}
 	}
 
@@ -76,6 +98,17 @@ a,
 		&:hover {
 			color: $light;
 		}
+
+		&:focus,
+		&.focus {
+			box-shadow: none;
+		}
+
+		&:not(:disabled):not(.disabled):active, 
+		.btn-primary:not(:disabled):not(.disabled).active {
+			background-color: $grass;
+			border-color: $md-grass;
+		}
 	}
 
 	&.btn-danger {
@@ -84,6 +117,17 @@ a,
 		&:hover {
 			color: $light;
 		}
+
+		&:focus,
+		&.focus {
+			box-shadow: none;
+		}
+
+		&:not(:disabled):not(.disabled):active, 
+		.btn-primary:not(:disabled):not(.disabled).active {
+			background-color: $sun2;
+			border-color: $md-sun2;
+		}
 	}
 
 	&.btn-warning {
@@ -91,6 +135,17 @@ a,
 		border-color: $md-sun;
 		&:hover {
 			color: $light;
+		}
+
+		&:focus,
+		&.focus {
+			box-shadow: none;
+		}
+
+		&:not(:disabled):not(.disabled):active, 
+		.btn-primary:not(:disabled):not(.disabled).active {
+			background-color: $sun;
+			border-color: $md-sun;
 		}
 	}
 
@@ -103,6 +158,24 @@ a,
 			background-color: transparent;
 			border: 1px solid $pinky;
 			border-bottom: 10px solid;
+			color: $pinky;
+		}
+
+		&:focus,
+		&.focus {
+			box-shadow: none;
+		}
+
+		&:not(:disabled):not(.disabled):active, 
+		&:not(:disabled):not(.disabled).active, 
+
+		.show > &.dropdown-toggle {
+			background-color: transparent;
+
+
+			border: 1px solid $pinky;
+			border-bottom:
+			 10px solid;
 			color: $pinky;
 		}
 	}
