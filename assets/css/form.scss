@@ -69,6 +69,46 @@
 	}
 }
 
+.profile-img {
+	width: 200px;
+	height: 200px;
+	max-width: 100%;
+	border-radius: 50%;
+	overflow: hidden;
+	margin: 0 auto 25px;
+
+	img {
+		width: 100%;
+		height: auto;
+	}
+}
+
+.gj-picker {
+	background: $lg-bg;
+	opacity: 0.95;
+}
+
+.gj-picker-md {
+    color: $purple3;
+    border: 1px solid $purple3;
+    border-radius: 5px;
+}
+
+.gj-picker-md {
+	table tr {
+		td.today {
+			div {
+			    color: $pinky;
+			    font-weight: bold;
+			}
+		}
+
+		td.selected.gj-cursor-pointer div {
+		    background: $purple3;
+		}
+	}
+}
+
 @media screen and (min-width: 768px) {
 	.newsletter {
 		display: -webkit-box;

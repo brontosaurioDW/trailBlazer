@@ -438,31 +438,6 @@ form {
 	}
 }
 
-.gj-picker {
-	background: $lg-bg;
-	opacity: 0.95;
-}
-
-.gj-picker-md {
-    color: $purple3;
-    border: 1px solid $purple3;
-    border-radius: 5px;
-}
-
-.gj-picker-md {
-	table tr {
-		td.today {
-			div {
-			    color: $pinky;
-			    font-weight: bold;
-			}
-		}
-
-		td.selected.gj-cursor-pointer div {
-		    background: $purple3;
-		}
-	}
-}
 
 // 10.1 Forms - Checkbox
 
