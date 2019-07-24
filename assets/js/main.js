@@ -127,12 +127,9 @@ function stickyHeader() {
     var header = document.getElementById("header");
     var sticky = header.offsetTop;
 
-    if (window.pageYOffset > 0 && window.pageYOffset < 250) {
+    if (window.pageYOffset > 0 && window.pageYOffset < 100) {
         header.classList.add("sticky");
-    } else {        
-        $(header).animate({
-            'margin-top': -20,
-        });
+    } else {    
         header.classList.remove("sticky");
     } 
 }

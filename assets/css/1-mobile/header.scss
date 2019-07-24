@@ -6,15 +6,15 @@ header {
 	position: absolute;
 	left: 0;
 	right: 0;
-	top: 0;
+	top: -5px;
 	z-index: 10;
 
-	&.sticky,
 	&.session-show {
 		background: #211b3f;
 	}
 
 	&.sticky {
+		top: 5px;
 		position: fixed;
 	}
 
