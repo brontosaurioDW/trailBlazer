@@ -6,17 +6,17 @@
         
         <title>Trailblazer</title>
 
-        <link rel="stylesheet" type="text/css" href="dist/css/default.css">
+        <link rel="stylesheet" type="text/css" href="../dist/css/default.css">
         <link href="https://fonts.googleapis.com/css?family=Raleway:200,300,400,500,600,700,800" rel="stylesheet">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" >
 
-        <link rel="stylesheet" type="text/css" href="dist/css/vendor.css" >
-        <link rel="stylesheet" type="text/css" href="dist/css/main.css" >
+        <link rel="stylesheet" type="text/css" href="../dist/css/vendor.css" >
+        <link rel="stylesheet" type="text/css" href="../dist/css/main.css" >
     </head>
     <body>
         <div class="lg-bg">
             <!-- Add class="session-show" if you need a header with dark background -->
-            <header id="header" class="session-show">
+            <header id="header" class="">
                 <div class="container">
                     <nav class="row static navbar navbar-expand-lg">
                         <div class="col-lg-4">
@@ -62,7 +62,7 @@
             <main>
                 <!-- Homepage Hero -->
                 <!-- Add class="session-show" if you need to show this module -->
-                <div class="session-hide">
+                <div class="session-show">
                     <section class="hero homepage documentation d-flex align-items-center">
                         <div class="container">
                             <div class="row">
@@ -90,7 +90,7 @@
                 </div>
                 
                 <!-- Add class="session-active" if the session is not new-->
-                <section class="documentation-main session-active">
+                <section class="documentation-main">
                     <div class="container-fluid">
                         <div class="row">    
 
@@ -172,7 +172,7 @@
                             <div class="col-lg-8">
 
                                 <!-- Add class="session-show" if you need to show this module -->
-                                <div class="doc-block section-name session-show"> 
+                                <div class="doc-block section-name session-hide"> 
                                     <h2 class="w-100">Representable: Function Api</h2>
                                     <ul>
                                         <li>
@@ -351,7 +351,7 @@ if: ->(fragment:, **) { fragment.nil? }
                                         <li><a href="#">Instance</a></li>
                                     </ul>
 
-                                    <img src="dist/img/deco1.png" alt="Trailblazer" class="wow fadeIn">
+                                    <img src="../dist/img/deco1.png" alt="Trailblazer" class="wow fadeIn">
                                 </div>
                             </div>
                         </div>
@@ -421,8 +421,8 @@ if: ->(fragment:, **) { fragment.nil? }
             </footer>
         </div>
 
-        <script src="dist/js/vendor.js"></script>
-        <script src="dist/js/main.js"></script>
+        <script src="../dist/js/vendor.js"></script>
+        <script src="../dist/js/main.js"></script>
 
     </body>
 </html>
