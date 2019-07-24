@@ -1,4 +1,21 @@
-$(document).ready(function(event) {
+var anchors = new anchorJS();
+anchors.add(".doc-block h1");
+anchors.add(".doc-block h2");
+anchors.add(".doc-block h3");
+anchors.add(".doc-block h4");
+anchors.add(".doc-block ul.navigation li:last-child");
+
+$(document).ready(function() {
+    $(window).on('activate.bs.scrollspy', function(e) {
+        var href = $('.nav-item .active').attr("href");
+        var chapter = href;
+        var feature = chapter + '-features';
+        $('.features').hide();
+        $(feature).show();
+        history.replaceState({}, "", href);
+        window.location.hash = href;
+    });
+
     stickyHeader();
 
     // Hightlight.js --> for code snippet
@@ -89,6 +106,9 @@ $(document).ready(function(event) {
     });
     
     hljs.initHighlightingOnLoad();
+
+    var anchors = new anchorJS();
+    anchors.add('.anchored');
 
     // DATEPICKER
     if ($('.datepicker').length > 0) {
