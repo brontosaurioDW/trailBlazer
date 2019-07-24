@@ -22,6 +22,7 @@ Trailbootstrap
 18. Progress
 19. Spinners
 21. Tooltips
+22. Tables
 
 
 
@@ -781,3 +782,69 @@ form {
 }
 
 
+// 22. Tables
+
+.table-responsive {
+	background: #F0F0F0;
+	padding: $gap;
+	display: inline-block;
+	border-radius: 3px;
+    border: 1px solid #4D4499;
+}
+
+.table {
+	color: $purple3;
+	margin: $gap2 0;	
+
+	thead {
+		th {
+		    border-bottom: 2px solid $ocean;
+		    font-weight: bold;
+		}
+	}
+
+	.thead-dark {
+		th {
+		    background-color: $ocean;
+		    border-color: $ocean;
+		}
+	}
+
+	td, 
+	th {
+	    padding: 10px;
+	    vertical-align: middle;
+	    border-top: transparent;
+	    line-height: normal;
+	    font-size: $regular;
+	    font-weight: $medium;
+	}
+
+	tr {
+		td:first-child {
+			padding-left: 0;
+
+			pre {
+				margin: 0;
+				border-radius: 3px;
+				padding: 5px;
+				background-color: $sun2;
+				color: $light;
+			}
+		}
+	}
+
+	pre {
+		display: inline-block;
+		vertical-align: middle;
+		margin: 0 10px;
+	}		
+}	
+
+.table-striped {
+	tbody {
+		tr:nth-of-type(odd) {
+		    background-color: rgb(255, 231, 214);
+		}
+	}
+}

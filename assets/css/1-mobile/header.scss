@@ -1,17 +1,21 @@
 header {	
 	padding-top: 1.2rem;
 	padding-bottom: 1.2rem;
-	background: transparent;
-	position: fixed;
-	left: 0;
-	top: 0;
-	right: 0;
-	z-index: 10;
+	background: transparent;	
 	transition: 0.3s;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	z-index: 10;
 
 	&.sticky,
 	&.session-show {
 		background: #211b3f;
+	}
+
+	&.sticky {
+		position: fixed;
 	}
 
 	.navbar-toggler {

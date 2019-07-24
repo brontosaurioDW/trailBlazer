@@ -11,6 +11,11 @@
 		margin: 0;
 	}
 
+	.nav {
+	    border-bottom: 0;
+	    border-radius: 0;
+	}
+
 	ul {
 		list-style: none;
 	}
@@ -56,6 +61,20 @@
 
 	.vertical.menu {
 	    margin: 15px 25px;
+
+	    i {
+	    	color: $lg-ocean;
+	    	font-size: $x-small;
+	    	vertical-align: middle;
+	    	margin-right: 5px;
+	    }
+
+	    .sub-item {
+	    	a {
+	    		padding-left: $gap;
+	    		font-size: $regular;
+	    	}
+	    }
 
 	    a {
 	    	font-size: $x-regular;

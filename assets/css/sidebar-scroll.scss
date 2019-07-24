@@ -22,6 +22,20 @@
 	    margin: 15px 25px;
 	    padding: 0;
 
+	    i {
+	    	color: $lg-ocean;
+	    	font-size: $x-small;
+	    	vertical-align: middle;
+	    	margin-right: 5px;
+	    }
+
+	    .sub-item {
+	    	a {
+	    		padding-left: $gap;
+	    		font-size: $regular;
+	    	}
+	    }
+
 	    a {
 	    	font-size: $x-regular;
 	    	color: $dark;

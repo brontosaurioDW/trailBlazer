@@ -1,10 +1,11 @@
-.bd-callout {
-    padding: 1.25rem;
-    margin-top: 1.25rem;
-    margin-bottom: 1.25rem;
-    border: 1px solid rgb(61, 53, 128);
-    border-left-width: .25rem;
-    border-radius: .25rem;
+.bd-callout.bd-callout {
+    background: $lg-ocean;
+    border: 1px solid $lg-ocean-b;
+    color: $light;
+    padding: 30px;
+    margin: 15px 0;
+    border-top-width: 8px;
+    border-radius: 3px;
 
     h4 {
         margin-top: 0;
@@ -12,6 +13,7 @@
     }
 
     p {
+        color: $light;
         margin: 0;
     }
 
@@ -24,7 +26,7 @@
     }
 
     code {
-        border-radius: .25rem
+        color: $lg-ocean-b;
     }
 }
 

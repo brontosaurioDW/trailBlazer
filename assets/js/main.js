@@ -127,11 +127,14 @@ function stickyHeader() {
     var header = document.getElementById("header");
     var sticky = header.offsetTop;
 
-    if (window.pageYOffset > sticky) {
+    if (window.pageYOffset > 0 && window.pageYOffset < 250) {
         header.classList.add("sticky");
-    } else {
+    } else {        
+        $(header).animate({
+            'margin-top': -20,
+        });
         header.classList.remove("sticky");
-    }
+    } 
 }
 
 // Bootstrap popovers
