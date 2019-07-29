@@ -90,6 +90,11 @@ a,
 			background-color: $pinky;
 			border-color: $md-pinky;
 		}
+
+		&:not(:disabled):not(.disabled):active:focus, 
+		&:not(:disabled):not(.disabled).active:focus {
+		    box-shadow: none;
+		}
 	}
 
 	&.btn-success {

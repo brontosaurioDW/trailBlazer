@@ -13,7 +13,7 @@
         <link rel="stylesheet" type="text/css" href="../dist/css/vendor.css" >
         <link rel="stylesheet" type="text/css" href="../dist/css/main.css" >
     </head>
-    <body>
+    <body data-spy="scroll" data-target="#sidebar-scroll">
         <div class="lg-bg">
             <!-- Add class="session-show" if you need a header with dark background -->
             <header id="header" class="">
@@ -40,7 +40,7 @@
                                     <ul>
                                         <li>
                                             <i class="far fa-clock pink"></i>
-                                            <span> Last updated July 22nd 2019</span>
+                                            <span> Last updated July 29nd 2019</span>
                                         </li>
                                         <li>
                                             <i class="far fa-gem pink"></i>
@@ -98,8 +98,8 @@
 
 
 
-                                    <div id="alerts">
-                                       <h4>Alerts</h4>
+                                    <div>
+                                       <h4 id="alerts">Alerts</h4>
 
                                        <p>Alerts come in all shapes and many colors. The only difference with Bootstrap is that we are using a span tag inside the div (come on people! leaving text just floating inside a div? we are not animals!).</p>
                                        <p>Please use one of these 8 classes for colors:</p>
@@ -191,7 +191,7 @@
 
 
 </code></pre>
-
+                                    <h5 id="alert-with-link">Alerts with link</h5>
                                     <p>Links and close buttons can also be added to these alerts</p>
 
                                      <div class="alert alert-primary" role="alert">
@@ -281,16 +281,16 @@
 
 </code></pre>
 
-                                       <p>
-                                           Getting tired of these alers? Guess what, they can be closed too!
-                                       </p>
-
-                                       <div class="alert alert-primary" role="alert">
+                                        <h5 id="closing-alerts">Closing alerts</h5>
+                                        <p>
+                                            Getting tired of these alers? Guess what, they can be closed too!
+                                        </p>
+                                        <div class="alert alert-primary" role="alert">
                                             <span class="alert-text">
                                                 Eat your vegetables!
                                             </span>
                                             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                                <span aria-hidden="true">&times;</span>
+                                            <span aria-hidden="true">&times;</span>
                                             </button>
                                         </div>
                                         <div class="alert alert-secondary" role="alert">
@@ -298,16 +298,15 @@
                                                 Wash your teeth!
                                             </span>
                                             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                                <span aria-hidden="true">&times;</span>
+                                            <span aria-hidden="true">&times;</span>
                                             </button>
-
                                         </div>
                                         <div class="alert alert-success" role="alert">
                                             <span class="alert-text">
                                                 Clean your room!
                                             </span>
                                             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                                <span aria-hidden="true">&times;</span>
+                                            <span aria-hidden="true">&times;</span>
                                             </button>
                                         </div>
                                         <div class="alert alert-danger" role="alert">
@@ -315,7 +314,7 @@
                                                 Drink less coffee!
                                             </span>
                                             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                                <span aria-hidden="true">&times;</span>
+                                            <span aria-hidden="true">&times;</span>
                                             </button>
                                         </div>
                                         <div class="alert alert-warning" role="alert">
@@ -323,7 +322,7 @@
                                                 When are you getting married?
                                             </span>
                                             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                                <span aria-hidden="true">&times;</span>
+                                            <span aria-hidden="true">&times;</span>
                                             </button>
                                         </div>
                                         <div class="alert alert-info" role="alert">
@@ -331,7 +330,7 @@
                                                 You should play less board games!
                                             </span>
                                             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                                <span aria-hidden="true">&times;</span>
+                                            <span aria-hidden="true">&times;</span>
                                             </button>
                                         </div>
                                         <div class="alert alert-light" role="alert">
@@ -339,7 +338,7 @@
                                                 It's 7am! Get up and go to work!
                                             </span>
                                             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                                <span aria-hidden="true">&times;</span>
+                                            <span aria-hidden="true">&times;</span>
                                             </button>
                                         </div>
                                         <div class="alert alert-dark" role="alert">
@@ -347,7 +346,7 @@
                                                 Meh...
                                             </span>
                                             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                                <span aria-hidden="true">&times;</span>
+                                            <span aria-hidden="true">&times;</span>
                                             </button>
                                         </div>
 
@@ -451,7 +450,7 @@
 
 </code></pre>
 
-                                        <p>Badges can also be used as a cool counter in a button:</p>
+                                        <p id="badge-in-button">Badges can also be used as a cool counter in a button:</p>
 
                                         <button type="button" class="btn btn-main mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" data-upgraded=",MaterialButton,MaterialRipple">
                                             Downloads 
@@ -477,7 +476,7 @@
 
 </code></pre>
 
-                                        <p>Badges come in all cool colors:</p>
+                                        <p id="badge-in-color">Badges come in all cool colors:</p>
 
                                         <span class="badge badge-primary">Primary</span>
                                         <span class="badge badge-secondary">Secondary</span>
@@ -502,7 +501,7 @@
 
 </code></pre>
 
-                                        <p>And shapes:</p>
+                                        <p id="rounded-badge">And shapes:</p>
 
                                         <span class="badge badge-pill badge-primary">Primary</span>
                                         <span class="badge badge-pill badge-secondary">Secondary</span>
@@ -532,8 +531,8 @@
 
                                     <span class="divider"></span>
 
-                                    <div id="breadcrumb">
-                                        <h4>Breadcrumb</h4>
+                                    <div>
+                                        <h4 id="breadcrumb">Breadcrumb</h4>
 
                                         <p>Breadcrumbs help users navigate big sites</p>
 
@@ -588,8 +587,8 @@
 
                                     <span class="divider"></span>
 
-                                    <div id="buttons">
-                                        <h4>Buttons</h4>
+                                    <div>
+                                        <h4 id="buttons">Buttons</h4>
 
                                         <p>These are the main buttons that should be use in the entire site:</p>
 
@@ -606,7 +605,7 @@
 
 </code></pre>                                        
 
-                                        <p>These are designed for approve/cancel:</p>
+                                        <p id="approve-cancel">These are designed for approve/cancel:</p>
 
                                         <button type="button" class="btn btn-success mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent mb-2"> Download app </button>
 
@@ -621,7 +620,7 @@
 
 </code></pre>                                        
 
-                                        <p>This can be used as an alternative:</p>
+                                        <p id="alternative-btn">This can be used as an alternative:</p>
 
                                         <button type="button" class="btn btn-light mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"> Download app </button>
 
@@ -638,8 +637,8 @@
 
                                     <span class="divider"></span>
 
-                                    <div id="buttongroup">
-                                        <h4>Button group</h4>
+                                    <div>
+                                        <h4 id="buttongroup">Button group</h4>
 
                                         <p>Buttons sometimes like hanging out with other buttons:</p>
 
@@ -676,8 +675,8 @@
 
                                     <span class="divider"></span>
 
-                                    <div id="card">
-                                        <h4>Cards</h4>
+                                    <div>
+                                        <h4 id="card">Cards</h4>
 
                                         <p>Here's a card all by herself, it's size can be adjusted according to your needs.</p>
                                         
@@ -707,7 +706,8 @@
 
 
 </code></pre>                                           
-
+                                        
+                                        <h5 id="card-group">Card group</h5>
                                         <p>And here's a card hanging out with some other card friends, they will share the space on the "card-group" container.</p>
 
                                         <div class="card-group">
@@ -768,7 +768,7 @@
 
 
 </code></pre>                                           
-                                        
+                                        <h5 id="card-list">Cards as list of content</h5>
                                         <p>Cards can also be used to make lists of content with or without a titlem a footer; and even add links if you feel like it.</p>
                                         
                                         <div class="card">
@@ -808,7 +808,7 @@
 </code></pre>    
 
 
-
+                                        <h5 id="alternative-card">Alternative card</h5>
                                         <p>For a color alternative just add the class "card-alt":</p>
                                         
                                          <div class="row">
@@ -848,8 +848,8 @@
 
                                     <span class="divider"></span>
 
-                                    <div id="carousel">
-                                        <h4>Carousel</h4>
+                                    <div>
+                                        <h4 id="carousel">Carousel</h4>
 
                                         <p>For carousels we use the Slick carousel plug in, it's pretty neat and easy to use. To get the CSS, just add the class any-slider</p>
                                         <p>You can find the settings on <a href="https://kenwheeler.github.io/slick/" target="_blank">their documentation</a>.</p>
@@ -909,7 +909,8 @@
 </code></pre>                                        
 
                                         <div class="my-5"></div>
-
+                                        
+                                        <h4 id="with-dots">With dots (Paginator)</h4>
                                         <p>You can also use dots if you are feelling fancy and want to add some dots for the navigation.</p>
                                         <p class="mb-5">For this, just change "dots" to "true" in the JS. It will look like this:</p>
 
@@ -965,11 +966,10 @@
 
                                     <span class="divider"></span>
 
-                                    <div id="collapse">
-                                        <h4>Collapse</h4>
+                                    <div>
+                                        <h4 id="collapse">Collapse</h4>
 
                                         <p>Want to hide some spoilers on a collapse? How about this:</p>
-
 
                                         <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
                                             SPOILER ALER
@@ -993,9 +993,9 @@
 
 
 </code></pre>                                          
-
+                                        
+                                        <h5 id="accordion"> Collapse / Accordion</h5>
                                         <p>You can also use these as accordions</p>
-
 
                                         <div class="accordion" id="accordionExample">
                                             <div class="card">
@@ -1108,8 +1108,8 @@
 
                                     <span class="divider"></span>
 
-                                    <div id="dropdowns">
-                                        <h4>Dropdowns</h4>
+                                    <div>
+                                        <h4 id="dropdowns">Dropdowns</h4>
                                         <p>Here's a dropdown that can be used to nest other options:</p>
 
                                         <div class="dropdown">
@@ -1147,8 +1147,8 @@
 
                                     <span class="divider"></span>
 
-                                    <div id="forms">
-                                        <h4>Forms</h4>
+                                    <div>
+                                        <h4 id="forms">Forms</h4>
                                         <p>What's better than interacting with people that visit our site? Whit forms, now you can!</p>
 
                                         <form class="normal-form">
@@ -1201,7 +1201,7 @@
 
 
 </code></pre>                                         
-
+                                        
                                         <p>More form controls:</p>
                                         
                                         <form>
@@ -1307,7 +1307,7 @@
 
 </code></pre>                                         
 
-
+                                        <h5 id="validation"></h5>
                                         <p>Here's a form with validation:</p>
 
                                         <form class="was-validated">
@@ -1451,7 +1451,8 @@
 
 </code></pre>                                          
                 
-
+                                        
+                                        <h5 id="list-with-link">List group with links</h5>
                                         <p>You can also add links with active and disable items to make an awesome menu:</p>
 
                                         <div class="list-group">
@@ -1502,8 +1503,8 @@
 
                                     <span class="divider"></span>
 
-                                    <div id="mediaobject">
-                                        <h4>Media object</h4>
+                                    <div>
+                                        <h4 id="mediaobject">Media object</h4>
                                         <p>Feel like highlighting something? Add a media object!</p>
                                         <div class="media">
                                             <img src="https://www.fillmurray.com/g/64/64" class="mr-3" alt="...">
@@ -1642,7 +1643,7 @@ Click me!
 
 </code></pre>
 
-
+                                        <h5 id="alternative-tabs">Alternatives tabs</h5>
                                         <p>You can also use it as tabs:</p>
 
                                         <ul class="nav nav-tabs">
@@ -1690,8 +1691,8 @@ Click me!
 
                                     <span class="divider"></span>
 
-                                    <div id="pagination">
-                                        <h4>Pagination</h4>
+                                    <div>
+                                        <h4 id="pagination">Pagination</h4>
                                         <p>Here's a pagination with icons and active class.</p>
 
                                         <nav aria-label="Page navigation example">
@@ -1778,8 +1779,8 @@ Click me!
 
                                     <span class="divider"></span>
 
-                                    <div id="progress">
-                                        <h4>Progress</h4>
+                                    <div>
+                                        <h4 id="progress">Progress</h4>
                                         <p>Here are some progress bars:</p>
 
                                         <div class="progress mb-3">
@@ -1818,7 +1819,8 @@ Click me!
 
 
 </code></pre>                                          
-
+                                        
+                                        <h5 id="progress-with-label">Progress with label</h5>
                                         <p>A label can also be added:</p>
 
                                         <div class="progress">
@@ -1973,7 +1975,7 @@ Click me!
 </code></pre>
 
 
-                                        <h5>Dark header</h5>
+                                        <h5 id="darker-table">Dark header</h5>
 
                                         <table class="table">
                                             <thead class="thead-dark">
@@ -2041,7 +2043,7 @@ Click me!
 
 </code></pre>                                
                                         
-                                        <h5>Stripped table</h5>
+                                        <h5 id="stripped-table">Stripped table</h5>
                                         
                                         <table class="table table-striped">
                                             <thead>
@@ -2121,34 +2123,234 @@ Click me!
 
                             <div class="col-lg-3 d-none d-lg-block">
                                 <div id="sidebar-scroll" class="list-group sidebar-scroll">
-                                    <h3>
+                                    <h3 class="mt-0">
                                         <i class="fas fa-times"></i>
                                         <span>ON THIS PAGE:</span>
                                     </h3>
 
-                                    <ul class="vertical menu">
-                                        <li><a href="#alerts">Alerts</a></li>
-                                        <li><a href="#badge">Badge</a></li>
-                                        <li><a href="#breadcrumb">Breadcrumb</a></li>
-                                        <li><a href="#buttons">Buttons</a></li>
-                                        <li><a href="#buttongroup">Button group</a></li>
-                                        <li><a href="#card">Card</a></li>
-                                        <li><a href="#carousel">Carousel</a></li>
-                                        <li><a href="#collapse">Collapse</a></li>
-                                        <li><a href="#dropdowns">Dropdowns</a></li>
-                                        <li><a href="#forms">Forms</a></li>
-                                        <li><a href="#inputgroup">Input group</a></li>
-                                        <li><a href="#listgroup">List group</a></li>
-                                        <li><a href="#mediaobject">Media object</a></li>
-                                        <li><a href="#modal">Modal</a></li>
-                                        <li><a href="#navs">Navs</a></li>
-                                        <li><a href="#pagination">Pagination</a></li>
-                                        <li><a href="#popovers">Popovers</a></li>
-                                        <li><a href="#progress">Progress</a></li>
-                                        <li><a href="#scrollspy">Scrollspy</a></li>
-                                        <li><a href="#spinners">Spinners</a></li>
-                                        <li><a href="#tooltips">Tooltips</a></li>
-                                        <li><a href="#tables">tables</a></li>
+                                    <ul class="nav nav-tabs vertical menu" role="tablist">
+                                        <li class="nav-item">
+                                            <a  class="nav-link" href="#alerts">
+                                                <i class="fas fa-arrow-right"></i>
+                                                Alerts
+                                            </a>
+                                        </li>
+                                            <li class="sub-item nav-item">
+                                                <a  class="nav-link" href="#alert-with-link">
+                                                    Alerts with link
+                                                </a>
+                                            </li> 
+                                            <li class="sub-item nav-item">
+                                                <a  class="nav-link" href="#closing-alerts">
+                                                    Closing alerts
+                                                </a>
+                                            </li>
+                                        <li class="nav-item">
+                                            <a  class="nav-link" href="#badge-1">
+                                                <i class="fas fa-arrow-right"></i>
+                                                Badge
+                                            </a>
+                                        </li>
+                                            <li class="sub-item nav-item">
+                                                <a  class="nav-link" href="#badge-in-button">
+                                                    Badges in a button
+                                                </a>
+                                            </li>
+                                            <li class="sub-item nav-item">
+                                                <a  class="nav-link" href="#badge-in-color">
+                                                    Badges in color
+                                                </a>
+                                            </li>
+                                            <li class="sub-item nav-item">
+                                                <a  class="nav-link" href="#rounded-badge">
+                                                    Rounded badgeds
+                                                </a>
+                                            </li>
+                                        <li class="nav-item">
+                                            <a  class="nav-link" href="#breadcrumb">
+                                                <i class="fas fa-arrow-right"></i>
+                                                Breadcrumb
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a  class="nav-link" href="#buttons">
+                                                <i class="fas fa-arrow-right"></i>
+                                                Buttons
+                                            </a>
+                                        </li>
+                                            <li class="sub-item nav-item">
+                                                <a  class="nav-link" href="#approve-cancel">
+                                                    Approve / Cancel buttons
+                                                </a>
+                                            </li>
+                                            <li class="sub-item nav-item">
+                                                <a  class="nav-link" href="#alternative-btn">
+                                                    Alternative button
+                                                </a>
+                                            </li>
+                                        <li class="nav-item">
+                                            <a  class="nav-link" href="#buttongroup">
+                                                <i class="fas fa-arrow-right"></i>
+                                                Button group
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a  class="nav-link" href="#card">
+                                                <i class="fas fa-arrow-right"></i>
+                                                Card
+                                            </a>
+                                        </li>
+                                            <li class="sub-item nav-item">
+                                                <a  class="nav-link" href="#card-group">
+                                                    Card group
+                                                </a>
+                                            </li>
+                                            <li class="sub-item nav-item">
+                                                <a  class="nav-link" href="#card-list">
+                                                    Card list
+                                                </a>
+                                            </li>
+                                            <li class="sub-item nav-item">
+                                                <a  class="nav-link" href="#alternative-card">
+                                                    Alternative card
+                                                </a>
+                                            </li>
+                                        <li class="nav-item">
+                                            <a  class="nav-link" href="#carousel">
+                                                <i class="fas fa-arrow-right"></i>
+                                                Carousel
+                                            </a>
+                                        </li>
+                                            <li class="sub-item nav-item">
+                                                <a  class="nav-link" href="#with-dots">
+                                                    With dots
+                                                </a>
+                                            </li>
+                                        <li class="nav-item">
+                                            <a  class="nav-link" href="#collapse">
+                                                <i class="fas fa-arrow-right"></i>
+                                                Collapse
+                                            </a>
+                                        </li>
+                                            <li class="sub-item nav-item">
+                                                <a  class="nav-link" href="#accordion">
+                                                    Accordion
+                                                </a>
+                                            </li>
+                                        <li class="nav-item">
+                                            <a  class="nav-link" href="#dropdowns">
+                                                <i class="fas fa-arrow-right"></i>
+                                                Dropdowns
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a  class="nav-link" href="#forms">
+                                                <i class="fas fa-arrow-right"></i>
+                                                Forms
+                                            </a>
+                                        </li>
+                                            <li class="sub-item nav-item">
+                                                <a  class="nav-link" href="#validation">
+                                                    Validation
+                                                </a>
+                                            </li>
+                                        <li class="nav-item">
+                                            <a  class="nav-link" href="#inputgroup">
+                                                <i class="fas fa-arrow-right"></i>
+                                                Input group
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a  class="nav-link" href="#listgroup">
+                                                <i class="fas fa-arrow-right"></i>
+                                                List group
+                                            </a>
+                                        </li>
+                                            <li class="sub-item nav-item">
+                                                <a  class="nav-link" href="#list-with-link">
+                                                    With link
+                                                </a>
+                                            </li>
+                                        <li class="nav-item">
+                                            <a  class="nav-link" href="#mediaobject">
+                                                <i class="fas fa-arrow-right"></i>
+                                                Media object
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a  class="nav-link" href="#modal">
+                                                <i class="fas fa-arrow-right"></i>
+                                                Modal
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a  class="nav-link" href="#navs">
+                                                <i class="fas fa-arrow-right"></i>
+                                                Navs
+                                            </a>
+                                        </li>
+                                            <li class="sub-item nav-item">
+                                                <a  class="nav-link" href="#alternative-tabs">
+                                                    Alternative nav
+                                                </a>
+                                            </li>
+                                        <li class="nav-item">
+                                            <a  class="nav-link" href="#pagination">
+                                                <i class="fas fa-arrow-right"></i>
+                                                Pagination
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a  class="nav-link" href="#popovers">
+                                                <i class="fas fa-arrow-right"></i>
+                                                Popovers
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a  class="nav-link" href="#progress">
+                                                <i class="fas fa-arrow-right"></i>
+                                                Progress
+                                            </a>
+                                        </li>
+                                            <li class="sub-item nav-item">
+                                                <a  class="nav-link" href="#progress-with-label">
+                                                    Progress with label
+                                                </a>
+                                            </li>
+                                        <li class="nav-item">
+                                            <a  class="nav-link" href="#scrollspy">
+                                                <i class="fas fa-arrow-right"></i>
+                                                Scrollspy
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a  class="nav-link" href="#spinners">
+                                                <i class="fas fa-arrow-right"></i>
+                                                Spinners
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a  class="nav-link" href="#tooltips">
+                                                <i class="fas fa-arrow-right"></i>
+                                                Tooltips
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a  class="nav-link" href="#tables">
+                                                <i class="fas fa-arrow-right"></i>
+                                                tables
+                                            </a>
+                                        </li>
+                                            <li class="sub-item nav-item">
+                                                <a  class="nav-link" href="#darker-table">
+                                                    Darker table
+                                                </a>
+                                            </li>
+                                            <li class="sub-item nav-item">
+                                                <a  class="nav-link" href="#stripped-table">
+                                                    Stripped table
+                                                </a>
+                                            </li>
                                     </ul>
 
                                     <img src="../dist/img/deco1.png" alt="Trailblazer" class="wow fadeIn">

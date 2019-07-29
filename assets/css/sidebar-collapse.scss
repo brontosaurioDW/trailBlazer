@@ -61,6 +61,12 @@
 
 	.vertical.menu {
 	    margin: 15px 25px;
+	    border: 0;
+
+	    li {
+	    	display: block;
+	    	width: 100%;
+	    }
 
 	    i {
 	    	color: $lg-ocean;
@@ -71,8 +77,9 @@
 
 	    .sub-item {
 	    	a {
-	    		padding-left: $gap;
 	    		font-size: $regular;
+	    		text-transform: capitalize;
+	    		padding-left: $gap + 2;
 	    	}
 	    }
 
@@ -87,6 +94,7 @@
 
 	    .active {
 	    	font-weight: $medium;
+	    	border: 0;
 	    }
 	}
 }

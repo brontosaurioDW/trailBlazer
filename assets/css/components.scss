@@ -38,17 +38,17 @@ Trailbootstrap
 		font-weight: $medium;
 	    font-size: $x-regular;
 	    .alert-link {
-	    	cursor: pointer;
 	    	font-weight: $bold;
+	    	color: $light;
+	    	cursor: pointer;
+	    	text-decoration: underline;
 	    }
 	}
 	&.alert-primary {
 		background: $lg-purple2;
 		border-color: $lg-purple2-b;
 		color: $light;
-		.alert-link {
-			color: $lg-purple2-b;
-		}
+		
 		.close {
 			color: $purple2;
 			text-shadow: none;
@@ -58,9 +58,7 @@ Trailbootstrap
 		background: $lg-pinky;
 		border-color: $lg-pinky-b;
 		color: $light;
-		.alert-link {
-			color: $lg-pinky-b;
-		}
+		
 		.close {
 			color: $pinky;
 			text-shadow: none;
@@ -70,9 +68,7 @@ Trailbootstrap
 		background: $lg-grass;
 		border-color: $lg-grass-b;
 		color: $light;
-		.alert-link {
-			color: $lg-grass-b;
-		}
+		
 		.close {
 			color: $grass;
 			text-shadow: none;
@@ -82,9 +78,7 @@ Trailbootstrap
 		background: $lg-sun2;
 		border-color: $lg-sun2-b;
 		color: $light;
-		.alert-link {
-			color: $lg-sun2-b;
-		}
+		
 		.close {
 			color: $sun2;
 			text-shadow: none;
@@ -94,9 +88,7 @@ Trailbootstrap
 		background: $lg-sun;
 		border-color: $lg-sun-b;
 		color: $light;
-		.alert-link {
-			color: $lg-sun-b;
-		}
+		
 		.close {
 			color: $sun;
 			text-shadow: none;
@@ -106,9 +98,7 @@ Trailbootstrap
 		background: $lg-ocean;
 		border-color: $lg-ocean-b;
 		color: $light;
-		.alert-link {
-			color: $lg-ocean-b;
-		}
+		
 		.close {
 			color: $ocean;
 			text-shadow: none;
@@ -118,21 +108,21 @@ Trailbootstrap
 		background: transparent;
 		border-color: $lg-purple2;
 		color: $lg-purple2;
-		.alert-link {
-			color: $pinky;
-		}
+		
 		.close {
 			color: $purple2;
 			text-shadow: none;
+		}
+
+		.alert-link {
+			color: $lg-purple2;
 		}
 	}
 	&.alert-dark {
 		background: $lg-wine2;
 		border-color: $lg-wine2-b;
 		color: $light;
-		.alert-link {
-			color: $lg-wine2-b;
-		}
+		
 		.close {
 			color: $wine2;
 			text-shadow: none;
@@ -179,15 +169,22 @@ Trailbootstrap
 
 .breadcrumb {
     border-radius: 3px;
-    border: 1px solid $sun;
+    border: 1px solid $purple4;
     border-bottom-width: 8px;
     background-color: transparent;
+
     .breadcrumb-item {
     	a {
-			color: $purple;
+			color: $purple4;
     	}
+
     	&.active {
-    		color: $sun;
+    		color: $pinky;
+    		font-weight: bold;
+    	}
+
+    	&:before {
+    		font-weight: normal;
     	}
     }
 }
@@ -235,13 +232,13 @@ Trailbootstrap
 	&.card-alt {
 		background-color: transparent;
 		color: $pinky;
-		border-color: $lg-pineapple-b;
+		border-color: $purple;
 		.card-footer {
-			background-color: $lg-pineapple-b;
-			border-color: $lg-pineapple-b;
+			background-color: $purple;
+			border-color: $purple;
 			p {
 				margin: 0;
-				color: $pinky;
+				color: $light;
 				font-size: $regular;
 			}
 		}
@@ -349,6 +346,14 @@ Trailbootstrap
     	.dropdown-divider {
     		border-color: $pinky;
     	}
+	}
+
+	.dropdown-item.active, 
+	.dropdown-item:active,
+	.dropdown-item:hover, 
+	.dropdown-item:focus {
+	    background-color: $pinky;
+		color: $light;
 	}
 }
 
@@ -593,7 +598,7 @@ form {
 .media {
 	padding: 15px;
 	border-radius: 4px;
-	border: 1px solid $pineapple;
+	border: 1px solid $purple4;
 	font-size: $small;
 	color: $pinky;
 	h2,
@@ -648,6 +653,9 @@ form {
 		font-size: $regular;
 		font-weight: $bold;
 		text-transform: uppercase;
+		box-shadow: none;
+		outline: none;
+		border: 0;
 		.nav-icon {
 		    margin-top: 9px;
 		}
@@ -665,6 +673,17 @@ form {
 	}
 }
 
+.nav-tabs  {
+	.nav-link {
+		&:hover,
+		&:focus {
+			border: 0;
+			box-shadow: none;
+			outline: none;
+		}
+	}
+}
+
 
 // 16. Pagination
 
@@ -672,13 +691,13 @@ form {
 	.page-item {
 		.page-link {
 			background-color: transparent;
-			border-color: $pineapple;
-			color: $pinky;
+			border-color: $purple4;
+			color: $purple4;
 		}
 		&.active {
 			.page-link {
-				background-color: $pineapple;
-				font-weight: $bold;
+				background-color: $purple4;
+				color: $light;
 			}
 		}
 	}
@@ -798,15 +817,15 @@ form {
 
 	thead {
 		th {
-		    border-bottom: 2px solid $ocean;
+		    border-bottom: 2px solid $lg-purple4;
 		    font-weight: bold;
 		}
 	}
 
 	.thead-dark {
 		th {
-		    background-color: $ocean;
-		    border-color: $ocean;
+		    background-color: $lg-purple4;
+		    border-color: $lg-purple4;
 		}
 	}
 
