@@ -10,7 +10,7 @@ header {
 	z-index: 10;
 
 	&.session-show {
-		background: #211b3f;
+		background: $overlay-blue;
 	}
 
 	&.sticky {

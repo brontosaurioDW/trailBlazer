@@ -588,7 +588,7 @@ form {
 			font-weight: $bold;	
 		}
 		&.disabled {
-			color: #6c757d;
+			color: $md-grey;
 		}
 	}
 }
@@ -804,11 +804,11 @@ form {
 // 22. Tables
 
 .table-responsive {
-	background: #F0F0F0;
+	background: $lg-grey;
 	padding: $gap;
 	display: inline-block;
 	border-radius: 3px;
-    border: 1px solid #4D4499;
+    border: 1px solid $md-purple4;
 }
 
 .table {
