@@ -1,7 +1,7 @@
 .bd-callout.bd-callout {
-    background: $lg-ocean;
-    border: 1px solid $lg-ocean-b;
-    color: $light;
+    background: $lg-pinky-c;
+    border: 1px solid $pinky;
+    color: $purple4;
     padding: 30px;
     margin: 15px 0;
     border-top-width: 8px;
@@ -9,11 +9,12 @@
 
     h4 {
         margin-top: 0;
-        margin-bottom: .25rem
+        margin-bottom: .25rem;
+        color: $pinky;
     }
 
     p {
-        color: $light;
+        color: $purple4;
         margin: 0;
     }
 
@@ -26,35 +27,44 @@
     }
 
     code {
-        color: $lg-ocean-b;
+        color: $pinky;
+        font-size: $x-large;
+    }
+
+    &.bd-callout-info {
+        border-color: $purple4;
+
+        h4 {
+            color: $purple4;
+        }
+    }
+
+    &.bd-callout-warning {
+        border-color: $lg-sun-b;
+        background: $lg-sun-c;
+
+        h4,
+        code {
+            color: $lg-sun-b;
+        }
+    }
+
+    &.bd-callout-danger {
+        border-color: $danger;
+        background: $danger-lg;
+
+        h4,
+        code {
+            color: $danger;
+        }
+
+        p {
+            color: $danger-lg-b;
+        }
     }
 }
 
 
 .bd-callout + .bd-callout {
     margin-top: -.25rem
-}
-
-.bd-callout-info {
-    border-left-color: rgb(61, 53, 128);
-
-    h4 {
-        color: $turquoise;
-    }
-}
-
-.bd-callout-warning {
-    border-left-color: $lg-sun-b;
-
-    h4 {
-        color: $lg-sun-b;
-    }
-}
-
-.bd-callout-danger {
-    border-left-color: $lg-pinky;
-
-    h4 {
-        color: $lg-pinky;
-    }
 }
