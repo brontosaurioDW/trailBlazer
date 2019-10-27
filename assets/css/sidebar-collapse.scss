@@ -1,5 +1,26 @@
 .sidebar-accordion {
-	margin-top: $gap2;
+	overflow: auto!important;
+
+    /* width */
+	&::-webkit-scrollbar {
+	  width: 5px;
+	}
+
+	/* Track */
+	&::-webkit-scrollbar-track {
+	  background: transparent;
+	}
+
+	/* Handle */
+	&::-webkit-scrollbar-thumb {
+	  background: transparent;
+	  border-radius: 10px;
+	}
+
+	/* Handle on hover */
+	&::-webkit-scrollbar-thumb:hover {
+	  background: $lg-pinky;
+	}
 }
 
 .sidebar-accordion-wrapper {

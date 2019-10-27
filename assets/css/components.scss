@@ -359,6 +359,10 @@ Trailbootstrap
 
 // 10. Forms
 
+code {
+    font-size: 100%;
+}
+
 form {
 	.form-group {
 		margin: 1.5rem 0;
@@ -637,7 +641,23 @@ form {
 			}
 			.modal-footer {
 				border-color: $lg-pinky-b;
+
+				p {
+					color: $purple4;
+					margin: 0;
+				}
 			}			
+		}
+
+		.close-modal {
+		    font-size: $x-large;
+		    color: $light;
+		    position: absolute;
+		    right: -30px;
+		    top: 0;
+		    z-index: 10;
+		    border: 0;
+		    background: 0 0;
 		}
 	}
 }
@@ -835,7 +855,7 @@ form {
 	    vertical-align: middle;
 	    border-top: transparent;
 	    line-height: normal;
-	    font-size: $regular;
+	    font-size: $large;
 	    font-weight: $medium;
 	}
 

@@ -76,4 +76,10 @@
 	.table-responsive {
 		margin-bottom: $gap2 + 10;
 	}
+
+	ul, 
+	ol {
+	    font-size: $large;
+	    line-height: 150%;
+	}
 }

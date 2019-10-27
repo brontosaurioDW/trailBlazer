@@ -23,6 +23,11 @@
 		margin-bottom: $gap * 8;
 	}
 
+
+	.padding-small {
+		padding: 50px 30px;
+	}
+
 	// Homepage modules
 	.about {
 		img {
@@ -136,6 +141,10 @@
 	    &.deco-pink-rombo {
 	    	padding: $gap2 * 4 $gap2 * 5 $gap2 * 3;
 	    }
+	}
+
+	.padding-small {
+		padding: 50px 30px;
 	}
 
 	.dark-block {
