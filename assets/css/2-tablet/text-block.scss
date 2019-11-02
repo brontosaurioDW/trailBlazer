@@ -28,8 +28,13 @@
 
 
 	.padding-small {
-		padding: 30px;
+		padding: 30px !important;
+
+		&.deco-pink-rombo {
+			padding-top: 120px !important;
+		}
 	}
+
 
 	.main-section {
 		margin-top: $gap2 * 2;
@@ -68,6 +73,13 @@
 	    height: 350px;
 	    background: url(../img/cross-purple-lg.png) no-repeat center center;
 	    background-size: 35%;
+	}
+
+	.images {
+
+		.front-img {
+			margin: 15px 0 0 0;
+		}
 	}
 }
 

@@ -12,6 +12,12 @@
 
 	.white-block {
 		padding: 90px;
+
+		.images {
+			.back-img {				
+				margin-left: -15px;
+			}
+		}
 	}
 
 	.dark-block {
@@ -21,11 +27,6 @@
 	.main-section {
 		margin-top: $gap * 8;
 		margin-bottom: $gap * 8;
-	}
-
-
-	.padding-small {
-		padding: 50px 30px;
 	}
 
 	// Homepage modules
@@ -123,6 +124,19 @@
 	.two-columns {
 		margin: 150px 0;
 	}
+
+	.images {
+		padding-right: 40px;
+		padding-bottom: 40px;
+
+		.back-img {
+			margin: 0;
+		}
+
+		.front-img {
+			margin: -120px 0 0 30px;
+		}
+	}
 }
 
 @media screen and (min-width: 1200px) {
@@ -175,6 +189,14 @@
 			bottom: -55px;
 			width: 110px;
 			height: 110px;
+		}
+	}
+
+	.images {
+		padding-bottom: 0;
+
+		.front-img {
+			margin: -250px 0 0 30px;
 		}
 	}
 }

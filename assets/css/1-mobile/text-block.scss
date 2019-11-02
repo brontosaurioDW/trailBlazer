@@ -288,15 +288,21 @@ i.pink {
 }
 
 .images {
-	padding-right: 40px;
-	padding-bottom: 40px;
-	
-	.back-img {
-		margin: -10px 0 0 -30px;
+
+	&.orange-border {
+		img {
+    		box-shadow: 7px 7px 0 0 $sun;
+		}
 	}
 
-	.front-img {
-		margin: -80px 0 0 30px;
+	&.pink-border {
+		img {
+			box-shadow: 7px 7px 0 0 $pinky;
+		}
+	}
+
+	img {	    
+	    cursor: pointer;
 	}
 }
 
