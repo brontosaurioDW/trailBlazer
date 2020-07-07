@@ -10,7 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "gulp-uglifycss": "^1.1.0",
-    "npm": "^6.10.3",
+    "npm": "^6.14.6",
     "sass": "^1.13.4"
   },
   "devDependencies": {
